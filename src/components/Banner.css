@@ -1,0 +1,156 @@
+.carousel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.link {
+    position: absolute;
+    left: 70px;
+    bottom: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 10px;
+}
+
+.link a {
+    color: aliceblue;
+    padding-bottom: 6px;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+}
+
+.slide-hidden {
+    display: none;
+}
+
+/* .arrow {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    color: white;
+    filter: drop-shadow(0px 0px 5px #555);
+}
+
+.arrow:hover {
+    cursor: pointer;
+}
+
+.arrow-left {
+    left: 1rem;
+}
+
+.arrow-right {
+    right: 1rem;
+} */
+
+.indicators {
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+}
+
+.indicator {
+  background-color: #DB4444;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  border: 2px solid white;
+  outline: none;
+  margin: 0 0.2rem;
+  cursor: pointer;
+}
+
+.indicator-inactive {
+    height: 12px;
+    width: 12px;
+    background-color: gray;
+    border: none;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .link {
+        left: 10%;
+        bottom: 14px;
+        gap: 8px;
+    }
+
+    .link a {
+        font-size: 13px;
+    }
+
+    .indicators {
+        bottom: 3px;
+    }
+
+    .indicator {
+        width: 11px;
+        height: 11px;
+    }
+
+    .indicator-inactive {
+        width: 9px;
+        height: 9px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .link {
+        left: 10%;
+        bottom: 20px;
+        gap: 9px;
+    }
+
+    .link a {
+        font-size: 14px;
+    }
+
+    .indicators {
+        bottom: 6px;
+    }
+
+    .indicator {
+        width: 12px;
+        height: 12px;
+    }
+
+    .indicator-inactive {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .link {
+        left: 10%;
+        bottom: 14px;
+        gap: 8px;
+    }
+
+    .link a {
+        font-size: 13px;
+    }
+
+    .indicators {
+        bottom: 5px;
+    }
+
+    .indicator {
+        width: 11px;
+        height: 11px;
+    }
+
+    .indicator-inactive {
+        width: 9px;
+        height: 9px;
+    }
+}

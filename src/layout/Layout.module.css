@@ -1,0 +1,720 @@
+.maxWidth {
+    max-width: 1490px!important;
+    margin: auto;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.topHeader {
+    height: 48px;
+    width: 100%;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .topHeader .mainBox {
+    height: 100%;
+    width: 82%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* background-color: purple; */
+}
+
+.header .topHeader .mainBox .language {
+    color: #FAFAFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+}
+
+.header .topHeader .mainBox .language span {
+    margin-right: 10px;
+}
+
+.header .topHeader .saleBox span {
+    color: #D9D9D9;
+    margin-right: 20px;
+
+}
+
+.header .topHeader .saleBox a {
+    font-weight: 600;
+    color: #D9D9D9;
+}
+
+/* navbar */
+.header .navbar {
+    height: 38px;
+    width: 82%;
+    padding: 0 20px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: pink; */
+}
+
+.header .navbar .leftNav {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .leftNav .navbarLinks {
+    width: 367px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar .leftNav .navbarLinks a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.navbar .leftNav .navbarLinks a.active {
+    border-bottom: 2px solid #00000063;
+}
+
+.navbar .rightNav {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.navbar .rightNav .searchBox {
+    width: 70%;
+    height: 38px;
+    padding: 7px 12px 7px 20px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+    background-color: #f5f5f5;
+} 
+
+.navbar .rightNav .searchBox .searchInput {
+    width: 100%;
+}
+
+.navbar .rightNav .searchBox .searchInput input {
+    width: 100%;
+    height: 24px;
+    border: none;
+    background-color: #f5f5f5;
+}
+
+.navbar .rightNav .searchBox .searchInput input:focus {
+    outline: none;
+}
+
+.searchIcon {
+    width: 24px;
+    height: 24px;
+    text-align: center;
+}
+
+.navbar .rightNav .icons {
+    height: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .rightNav .icons .heart {
+    margin-right: 20px;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #dcdada;
+    margin-top: 20px;
+}
+
+.servicesBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicesMainBox {
+    width: 82%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+    margin: 100px 0 80px 0;
+}
+
+.servicesMainBox .services1, .servicesMainBox .services2, .servicesMainBox .services3 {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.services1 .serviceIcon, .services2 .serviceIcon, .services3 .serviceIcon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FAFAFA;
+    font-size: 25px;
+    border: 8px solid #c1c0c1;
+    margin-bottom: 24px;
+}
+
+.services1 .serviceDetail, .services2 .serviceDetail, .services3 .serviceDetail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.services1 .serviceDetail h5, .services2 .serviceDetail h5, .services3 .serviceDetail h5 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.services1 .serviceDetail span, .services2 .serviceDetail span, .services3 .serviceDetail span {
+    font-size: 14px;
+}
+
+.moveUpBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.moveUpMainBox {
+    width: 90%;
+    display: flex;
+    justify-content: end;
+}
+
+.moveUpIcon {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.footerBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+
+.footerBox .mainFooterBox {
+    width: 82%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    color: #FAFAFA;
+    margin: 70px 0 40px 0;
+}
+
+.mainFooterBox .box1, .mainFooterBox .box2, .mainFooterBox .box3, .mainFooterBox .box4, .mainFooterBox .box5 {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+.mainFooterBox .box5 {
+    margin-right: 0;
+}
+
+.mainFooterBox .box1 h5 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.mainFooterBox .box1 span {
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+
+.mainFooterBox .box1 p {
+    font-size: 16px;
+    margin-bottom: 16px;
+    font-weight: 200;
+}
+
+.mainFooterBox .box1 div {
+    width: 217px;
+    height: 48px;
+    border: 1px solid #FAFAFA;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 0 12px 16px;
+}
+
+.mainFooterBox .box1 div input {
+    width: 130px;
+    height: 24px;
+    font-size: 16px;
+    margin-right: 32px;
+    background-color: #000000;
+    border: none;
+    color: #FAFAFA;
+}
+
+.mainFooterBox .box1 div input:focus {
+    outline: none;
+}
+
+.mainFooterBox .box2 h5 {
+    font-size: 20px;
+    margin-bottom: 24px;
+    font-weight: 400;
+}
+
+.mainFooterBox .box2 span {
+    font-size: 16px;
+    margin-bottom: 16px;
+    width: 175px;
+    font-weight: 200;
+}
+
+.mainFooterBox .box3 h5 {
+    font-size: 20px;
+    margin-bottom: 24px;
+    font-weight: 400;
+}
+
+.mainFooterBox .box3 span {
+    margin-bottom: 16px;
+}
+
+.mainFooterBox .box3 span a {
+    font-size: 16px;
+    color: #FAFAFA;
+    text-decoration: none;
+    font-weight: 200;
+}
+
+.mainFooterBox .box4 h5 {
+    font-size: 20px;
+    margin-bottom: 24px;
+    font-weight: 400;
+}
+
+.mainFooterBox .box4 span {
+    margin-bottom: 16px;
+}
+
+.mainFooterBox .box4 span a {
+    font-size: 16px;
+    color: #FAFAFA;
+    text-decoration: none;
+    font-weight: 200;
+}
+
+.mainFooterBox .box5 h5 {
+    font-size: 20px;
+    margin-bottom: 24px;
+    font-weight: 400;
+}
+
+.mainFooterBox .box5 span {
+    font-size: 12px;
+    margin-bottom: 8px;
+    opacity: 70%;
+}
+
+.mainFooterBox .box5 .downloadApp {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.mainFooterBox .box5 .downloadApp .appStore {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainFooterBox .box5 .footerIcons {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    margin-top: 24px;
+    font-size: 25px;
+}
+
+.copyRight {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    opacity: 60%;
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    /* black header */
+    .header .topHeader .mainBox {
+        justify-content: flex-start;
+    }
+    
+    .header .topHeader .mainBox .language, .header .topHeader .mainBox .saleBox {
+        font-size: 11px;
+    }
+
+    .header .topHeader .mainBox .saleBox {
+        width: 80%;
+        text-align: center;
+    }
+
+    .header .topHeader .mainBox .language span {
+        margin-right: 5px;
+    }
+
+    /* navbar */
+    .header .navbar {
+        padding: 0 10px;
+        margin-top: 15px;
+    }
+
+    .header .navbar .leftNav {
+        width: 40%;
+    }
+
+    .header .navbar .leftNav .companyName {
+        font-size: 11px;
+    }
+
+    .header .navbar .rightNav {
+        width: 50%;
+    }
+
+    .header .navbar .rightNav .searchBox {
+        display: none;
+    }
+
+    .header .navbar .rightNav .icons .menuIcon {
+        margin-left: 20px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    /* black header */
+    .header .topHeader .mainBox {
+        justify-content: flex-start;
+    }
+
+    .header .topHeader .mainBox .language, .header .topHeader .mainBox .saleBox {
+        font-size: 12px;
+    }
+
+    .header .topHeader .mainBox .saleBox {
+        width: 80%;
+        text-align: center;
+    }
+
+    /* navbar */
+    .header .navbar {
+        padding: 0 10px;
+        margin-top: 30px;
+    }
+
+    .header .navbar .leftNav {
+        width: 30%;
+    }
+
+    .header .navbar .leftNav .companyName {
+        font-size: 12px;
+    }
+
+    .navbar .rightNav {
+        width: 60%;
+    }
+
+    .navbar .rightNav .searchBox {
+        padding: 5px;
+        margin-right: 10px;
+    }
+
+    .header .navbar .rightNav .searchBox .searchInput input  {
+        font-size: 11px;
+    }
+
+    .navbar .rightNav .icons .heart {
+        margin-right: 10px;
+    }
+
+    .navbar .rightNav .icons .menuIcon {
+        font-size: 22px;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .navbar .rightNav .icons .menuIcon {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* black header */    
+    .header .topHeader .mainBox .language, .header .topHeader .mainBox .saleBox {
+        font-size: 13px;
+    }
+
+    .header .navbar {
+        padding: 0 15px;
+    }
+
+    .header .navbar .leftNav {
+        width: 55%;
+    }
+
+    .header .navbar .leftNav .companyName {
+        font-size: 13px;
+        margin-right: 35px;
+    }
+
+    .header .navbar .leftNav .navbarLinks {
+        font-size: 12px;
+    }
+
+    .navbar .rightNav {
+        width: 40%;
+    }
+
+    .navbar .rightNav .searchBox {
+        margin-right: 13px;
+        padding: 7px;
+    }
+
+    .header .navbar .rightNav .searchBox .searchInput input  {
+        font-size: 12px
+    }
+
+    /* footer */
+    .footerBox .mainFooterBox {
+        grid-template-columns: repeat(3, 1fr);
+        margin: 20px 0 40px 0;
+        column-gap: 40px;
+    }
+
+    .mainFooterBox .box1,.mainFooterBox .box2, .mainFooterBox .box3, .mainFooterBox .box4, .mainFooterBox .box5 {
+        /* width: 100%; */
+        margin-right: 0;
+    }
+
+    .mainFooterBox .box1 h5 {
+        font-size: 23px;
+        margin-bottom: 16px;
+    }
+
+    .mainFooterBox .box1 span {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .mainFooterBox .box1 p {
+        font-size: 16px;
+    }
+
+    .mainFooterBox .box1 div {
+        margin-bottom: 16px;
+    }
+
+    .mainFooterBox .box1 div input {
+        font-size: 16px;
+    }
+
+    .mainFooterBox .box2 h5, .mainFooterBox .box3 h5, .mainFooterBox .box4 h5, .mainFooterBox .box5 h5 {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .mainFooterBox .box2 span, .mainFooterBox .box3 span, .mainFooterBox .box4 span {
+        width: 100%;
+        font-size: 16px;
+        margin-bottom: 13px;
+    }
+
+    .mainFooterBox .box3 span a, .mainFooterBox .box4 span a {
+        font-size: 16px;
+    }
+
+    .mainFooterBox .box5 span {
+        font-size: 12px;
+    }
+
+    .mainFooterBox .box5 .downloadApp {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    .header .navbar .leftNav {
+        width: 60%;
+    }
+
+    .navbar .rightNav {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    /* navbar */
+    .header .navbar .leftNav .navbarLinks {
+        display: none;
+    }
+
+    /* .header .navbar .rightNav {
+        display: none;
+    } */
+
+    /* services */
+    .servicesMainBox {
+        flex-direction: column;
+        gap: 30px;
+        margin: 85px 0 40px 0;
+    }
+
+    .services1 .serviceIcon, .services2 .serviceIcon, .services3 .serviceIcon {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        border: 5px solid #c1c0c1;
+        margin-bottom: 10px;
+    }
+
+    .services1 .serviceDetail h5, .services2 .serviceDetail h5, .services3 .serviceDetail h5 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    
+    .services1 .serviceDetail span, .services2 .serviceDetail span, .services3 .serviceDetail span {
+        font-size: 12px;
+    }
+
+    /* footer */
+    .footerBox .mainFooterBox {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 20px 0 40px 0;
+        gap: 15px;
+    }
+
+    .mainFooterBox .box1,.mainFooterBox .box2, .mainFooterBox .box3, .mainFooterBox .box4, .mainFooterBox .box5 {
+        /* width: 100%; */
+        margin-right: 0;
+    }
+
+    .mainFooterBox .box1 h5 {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .mainFooterBox .box1 span {
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+
+    .mainFooterBox .box1 p {
+        font-size: 13px;
+    }
+
+    .mainFooterBox .box1 div {
+        margin-bottom: 13px;
+    }
+
+    .mainFooterBox .box1 div input {
+        font-size: 13px;
+    }
+
+    .mainFooterBox .box2 h5, .mainFooterBox .box3 h5, .mainFooterBox .box4 h5, .mainFooterBox .box5 h5 {
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+
+    .mainFooterBox .box2 span, .mainFooterBox .box3 span, .mainFooterBox .box4 span {
+        width: 100%;
+        font-size: 13px;
+        margin-bottom: 13px;
+    }
+
+    .mainFooterBox .box3 span a, .mainFooterBox .box4 span a {
+        font-size: 13px;
+    }
+
+    .mainFooterBox .box5 span {
+        font-size: 10px;
+    }
+
+    .mainFooterBox .box5 .downloadApp {
+        justify-content: flex-start;
+    }
+
+    .copyRight {
+        gap: 5px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .footerBox .mainFooterBox {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 20px 0 40px 0;
+        column-gap: 20px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    .servicesMainBox {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1025px) {    
+    /* navbar */
+    .header .navbar .navbarLinksIcon {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    .footerBox .mainFooterBox {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 80px;
+    }
+}
