@@ -5,6 +5,15 @@ import styles from "./BestSellingProducts.module.css";
 import { CgHeart } from "react-icons/cg";
 import { CgEye } from "react-icons/cg";
 
+//images
+import img1 from "../assets/this month products/1.png"
+import img2 from "../assets/this month products/2.png"
+import img3 from "../assets/this month products/3.png"
+import img4 from "../assets/this month products/4.png"
+import star5 from "../assets/Five star.png"
+import star45 from "../assets/Four Half Star.png"
+import bannerImg from "../assets/banner/second banner.png"
+
 function BestSellingProducts() {
   return (
     <>
@@ -30,7 +39,7 @@ function BestSellingProducts() {
             {/* 1 */}
             <div className={styles.productBox}>
               <div className={styles.imgDiv}>
-                <img src="../src/assets/this month products/1.png" alt="" />
+                <img src={img1} alt="" />
 
                 <div className={styles.iconBox}>
                   <div>
@@ -59,7 +68,7 @@ function BestSellingProducts() {
                 </div>
 
                 <div className={styles.starAndCommentCount}>
-                  <img src="../src/assets/Five star.png" alt="" />
+                  <img src={star5} alt="" />
                   <span>(65)</span>
                 </div>
               </div>
@@ -68,7 +77,7 @@ function BestSellingProducts() {
             {/* 2 */}
             <div className={styles.productBox}>
               <div className={styles.imgDiv}>
-                <img src="../src/assets/this month products/2.png" alt="" />
+                <img src={img2} alt="" />
 
                 <div className={styles.iconBox}>
                   <div>
@@ -97,7 +106,7 @@ function BestSellingProducts() {
                 </div>
 
                 <div className={styles.starAndCommentCount}>
-                  <img src="../src/assets/Four half star.png" alt="" />
+                  <img src={star45} alt="" />
                   <span>(65)</span>
                 </div>
               </div>
@@ -106,7 +115,7 @@ function BestSellingProducts() {
             {/* 3 */}
             <div className={styles.productBox}>
               <div className={styles.imgDiv}>
-                <img src="../src/assets/this month products/3.png" alt="" />
+                <img src={img3} alt="" />
 
                 <div className={styles.iconBox}>
                   <div>
@@ -135,7 +144,7 @@ function BestSellingProducts() {
                 </div>
 
                 <div className={styles.starAndCommentCount}>
-                  <img src="../src/assets/Four half star.png" alt="" />
+                  <img src={star45} alt="" />
                   <span>(65)</span>
                 </div>
               </div>
@@ -144,7 +153,7 @@ function BestSellingProducts() {
             {/* 4 */}
             <div className={styles.productBox}>
               <div className={styles.imgDiv}>
-                <img src="../src/assets/this month products/4.png" alt="" />
+                <img src={img4} alt="" />
 
                 <div className={styles.iconBox}>
                   <div>
@@ -173,7 +182,7 @@ function BestSellingProducts() {
                 </div>
 
                 <div className={styles.starAndCommentCount}>
-                  <img src="../src/assets/Five star.png" alt="" />
+                  <img src={star5} alt="" />
                   <span>(65)</span>
                 </div>
               </div>
@@ -220,7 +229,7 @@ function BestSellingProducts() {
           </div>
 
           <div className={styles.rightBox}>
-            <img src="../src/assets/banner/second banner.png" alt="" />
+            <img src={bannerImg} alt="" />
           </div>
         </div>
       </div>

@@ -7,6 +7,19 @@ import { BsArrowLeft } from "react-icons/bs";
 import { CgHeart } from "react-icons/cg";
 import { CgEye } from "react-icons/cg";
 
+//images
+import img1 from "../assets/all products/1.png"
+import img2 from "../assets/all products/2.png"
+import img3 from "../assets/all products/3.png"
+import img4 from "../assets/all products/4.png"
+import img5 from "../assets/all products/5.png"
+import img6 from "../assets/all products/6.png"
+import img7 from "../assets/all products/7.png"
+import img8 from "../assets/all products/8.png"
+import star5 from "../assets/Five star.png"
+import star45 from "../assets/Four Half Star.png"
+import star4 from "../assets/Four Star.png"
+
 function AllProducts() {
   return (
     <>
@@ -39,7 +52,7 @@ function AllProducts() {
             {/* 1 */}
             <div className={styles.productBox}>
               <div className={styles.imgDiv}>
-                <img src="../src/assets/all products/1.png" alt="" />
+                <img src={img1} alt="" />
 
                 <div className={styles.iconBox}>
                   <div>
@@ -68,7 +81,7 @@ function AllProducts() {
                 </div>
 
                 <div className={styles.starAndCommentCount}>
-                  <img src="../src/assets/Four Half star.png" alt="" />
+                  <img src={star45} alt="" />
                   <span>(35)</span>
                 </div>
               </div>
@@ -77,7 +90,7 @@ function AllProducts() {
             {/* 2 */}
             <div className={styles.productBox}>
               <div className={styles.imgDiv}>
-                <img src="../src/assets/all products/2.png" alt="" />
+                <img src={img2} alt="" />
 
                 <div className={styles.iconBox}>
                   <div>
@@ -106,7 +119,7 @@ function AllProducts() {
                 </div>
 
                 <div className={styles.starAndCommentCount}>
-                  <img src="../src/assets/Four Half star.png" alt="" />
+                  <img src={star4} alt="" />
                   <span>(95)</span>
                 </div>
               </div>
@@ -115,7 +128,7 @@ function AllProducts() {
             {/* 3 */}
             <div className={styles.productBox}>
               <div className={styles.imgDiv}>
-                <img src="../src/assets/all products/3.png" alt="" />
+                <img src={img3} alt="" />
 
                 <div className={styles.iconBox}>
                   <div>
@@ -144,7 +157,7 @@ function AllProducts() {
                 </div>
 
                 <div className={styles.starAndCommentCount}>
-                  <img src="../src/assets/Four Half star.png" alt="" />
+                  <img src={star5} alt="" />
                   <span>(325)</span>
                 </div>
               </div>
@@ -153,7 +166,7 @@ function AllProducts() {
             {/* 4 */}
             <div className={styles.productBox}>
               <div className={styles.imgDiv}>
-                <img src="../src/assets/all products/4.png" alt="" />
+                <img src={img4} alt="" />
 
                 <div className={styles.iconBox}>
                   <div>
@@ -182,7 +195,7 @@ function AllProducts() {
                 </div>
 
                 <div className={styles.starAndCommentCount}>
-                  <img src="../src/assets/Four Half star.png" alt="" />
+                  <img src={star4} alt="" />
                   <span>(145)</span>
                 </div>
               </div>
@@ -191,7 +204,7 @@ function AllProducts() {
             {/* 5 */}
             <div className={styles.productBox}>
               <div className={styles.imgDiv}>
-                <img src="../src/assets/all products/5.png" alt="" />
+                <img src={img5} alt="" />
 
                 <div className={styles.iconBox}>
                   <div>
@@ -224,7 +237,7 @@ function AllProducts() {
                 </div>
 
                 <div className={styles.starAndCommentCount}>
-                  <img src="../src/assets/Four Half star.png" alt="" />
+                  <img src={star5} alt="" />
                   <span>(65)</span>
                 </div>
 
@@ -243,7 +256,7 @@ function AllProducts() {
             {/* 6 */}
             <div className={styles.productBox}>
               <div className={styles.imgDiv}>
-                <img src="../src/assets/all products/6.png" alt="" />
+                <img src={img6} alt="" />
 
                 <div className={styles.iconBox}>
                   <div>
@@ -272,7 +285,7 @@ function AllProducts() {
                 </div>
 
                 <div className={styles.starAndCommentCount}>
-                  <img src="../src/assets/Four Half star.png" alt="" />
+                  <img src={star5} alt="" />
                   <span>(35)</span>
                 </div>
 
@@ -291,7 +304,7 @@ function AllProducts() {
             {/* 7 */}
             <div className={styles.productBox}>
               <div className={styles.imgDiv}>
-                <img src="../src/assets/all products/7.png" alt="" />
+                <img src={img7} alt="" />
 
                 <div className={styles.iconBox}>
                   <div>
@@ -324,7 +337,7 @@ function AllProducts() {
                 </div>
 
                 <div className={styles.starAndCommentCount}>
-                  <img src="../src/assets/Four Half star.png" alt="" />
+                  <img src={star45} alt="" />
                   <span>(55)</span>
                 </div>
 
@@ -343,7 +356,7 @@ function AllProducts() {
             {/* 8 */}
             <div className={styles.productBox}>
               <div className={styles.imgDiv}>
-                <img src="../src/assets/all products/8.png" alt="" />
+                <img src={img8} alt="" />
 
                 <div className={styles.iconBox}>
                   <div>
@@ -372,7 +385,7 @@ function AllProducts() {
                 </div>
 
                 <div className={styles.starAndCommentCount}>
-                  <img src="../src/assets/Four Half star.png" alt="" />
+                  <img src={star45} alt="" />
                   <span>(55)</span>
                 </div>
 

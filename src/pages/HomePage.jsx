@@ -2,7 +2,7 @@ import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 //data
-import { slides } from "../data/carouselData.json";
+import { slides } from "../data/carouselData";
 
 //components
 import Category from "../components/Category";
@@ -27,7 +27,9 @@ import { CgEye } from "react-icons/cg";
 
 //images
 import img1 from "../assets/home page products/1.png"
-import img2 from "./assets/home page products/2.png"
+import img2 from "../assets/home page products/2.png"
+import img3 from "../assets/home page products/3.png"
+import img4 from "../assets/home page products/4.png"
 
 function HomePage() {
   return (
@@ -317,7 +319,7 @@ function HomePage() {
                   <div className={styles.productBox}>
                     <div className={styles.imgDiv}>
                       <img
-                        src="../src/assets/home page products/3.png"
+                        src={img3}
                         alt=""
                       />
 
@@ -359,7 +361,7 @@ function HomePage() {
                   <div className={styles.productBox}>
                     <div className={styles.imgDiv}>
                       <img
-                        src="../src/assets/home page products/4.png"
+                        src={img4}
                         alt=""
                       />
 
@@ -401,7 +403,7 @@ function HomePage() {
                   <div className={styles.productBox}>
                     <div className={styles.imgDiv}>
                       <img
-                        src="../src/assets/home page products/1.png"
+                        src={img1}
                         alt=""
                       />
 
@@ -443,7 +445,7 @@ function HomePage() {
                   <div className={styles.productBox}>
                     <div className={styles.imgDiv}>
                       <img
-                        src="../src/assets/home page products/2.png"
+                        src={img2}
                         alt=""
                       />
 
@@ -485,7 +487,7 @@ function HomePage() {
                   <div className={styles.productBox}>
                     <div className={styles.imgDiv}>
                       <img
-                        src="../src/assets/home page products/3.png"
+                        src={img3}
                         alt=""
                       />
 
@@ -527,7 +529,7 @@ function HomePage() {
                   <div className={styles.productBox}>
                     <div className={styles.imgDiv}>
                       <img
-                        src="../src/assets/home page products/4.png"
+                        src={img4}
                         alt=""
                       />
 

@@ -1,5 +1,11 @@
 import styles from "./Featured.module.css";
 
+//images
+import img1 from "../assets/arrival product/1.png"
+import img2 from "../assets/arrival product/2.png"
+import img3 from "../assets/arrival product/3.png"
+import img4 from "../assets/arrival product/4.png"
+
 function Featured() {
   return (
     <div className={styles.featuredBox}>
@@ -17,7 +23,7 @@ function Featured() {
 
         <div className={styles.bottomBox}>
           <div className={styles.leftBox}>
-            <img src="../src/assets/arrival product/1.png" alt="" />
+            <img src={img1} alt="" />
             <div className={styles.imgDescription}>
               <h5>PlayStation 5</h5>
               <span>
@@ -28,7 +34,7 @@ function Featured() {
           </div>
           <div className={styles.rightBox}>
             <div className={styles.rightTopBox}>
-              <img src="../src/assets/arrival product/2.png" alt="" />
+              <img src={img2} alt="" />
               <div className={styles.imgDescription}>
                 <h5>Women’s Collections</h5>
                 <span>
@@ -39,7 +45,7 @@ function Featured() {
             </div>
             <div className={styles.rightBottomBox}>
               <div className={styles.rightBottomBoxLeft}>
-                <img src="../src/assets/arrival product/3.png" alt="" />
+                <img src={img3} alt="" />
                 <div className={styles.imgDescription}>
                   <h5>Speakers</h5>
                   <span>Amazon wireless speakers</span>
@@ -47,7 +53,7 @@ function Featured() {
                 </div>
               </div>
               <div className={styles.rightBottomBoxRight}>
-                <img src="../src/assets/arrival product/4.png" alt="" />
+                <img src={img4} alt="" />
                 <div className={styles.imgDescription}>
                   <h5>Perfume</h5>
                   <span>GUCCI INTENSE OUD EDP</span>

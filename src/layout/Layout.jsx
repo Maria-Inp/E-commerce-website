@@ -21,6 +21,11 @@ import { BsArrowUp } from "react-icons/bs";
 //css
 import styles from "./Layout.module.css";
 
+//images
+import qrCode from "../assets/download app/Qr Code.png"
+import googlePlay from "../assets/download app/GooglePlay.png"
+import appStore from "../assets/download app/download-appstore.png"
+
 function Layout({ children }) {
   return (
     <>
@@ -194,15 +199,15 @@ function Layout({ children }) {
                 <span>Save $3 with App New User Only</span>
                 <div className={styles.downloadApp}>
                   <div>
-                    <img src="../src/assets/download app/Qr Code.png" alt="" />
+                    <img src={qrCode} alt="" />
                   </div>
                   <div className={styles.appStore}>
                     <img
-                      src="../src/assets/download app/GooglePlay.png"
+                      src={googlePlay}
                       alt=""
                     />
                     <img
-                      src="../src/assets/download app/download-appstore.png"
+                      src={appStore}
                       alt=""
                     />
                   </div>
