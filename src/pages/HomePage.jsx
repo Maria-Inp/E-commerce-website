@@ -229,7 +229,7 @@ function HomePage() {
                   <div className={styles.productBox}>
                     <div className={styles.imgDiv}>
                       <img
-                        src="../src/assets/home page products/1.png"
+                        src="./assets/home page products/1.png"
                         alt=""
                       />
 
