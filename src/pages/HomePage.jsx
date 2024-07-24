@@ -25,6 +25,10 @@ import { BsArrowLeft } from "react-icons/bs";
 import { CgHeart } from "react-icons/cg";
 import { CgEye } from "react-icons/cg";
 
+//images
+import img1 from "../assets/home page products/1.png"
+import img2 from "./assets/home page products/2.png"
+
 function HomePage() {
   return (
     <>
@@ -229,7 +233,7 @@ function HomePage() {
                   <div className={styles.productBox}>
                     <div className={styles.imgDiv}>
                       <img
-                        src="E-commerce-website/src/assets/home page products/1.png"
+                        src={img1}
                         alt=""
                       />
 
@@ -271,7 +275,7 @@ function HomePage() {
                   <div className={styles.productBox}>
                     <div className={styles.imgDiv}>
                       <img
-                        src="../src/assets/home page products/2.png"
+                        src={img2}
                         alt=""
                       />
 
