@@ -59,7 +59,7 @@ function Layout({ children }) {
               borderBottom: isActive ? "2px solid #00000063" : "none",
             })} */}
               <div className={styles.navbarLinks}>
-                <NavLink to="/">Home</NavLink>
+                <NavLink to="/E-commerce-website/" style={{borderBottom:"2px solid #00000063"}}>Home</NavLink>
                 <NavLink to="/contact">Contact</NavLink>
                 <NavLink to="/about">About</NavLink>
                 <NavLink to="/signup">SignUp</NavLink>

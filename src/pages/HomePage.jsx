@@ -2,7 +2,7 @@ import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 //data
-import { slides } from "../data/carouselData";
+import slides from "../data/carouselData";
 
 //components
 import Category from "../components/Category";

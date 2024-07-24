@@ -9,12 +9,6 @@ import "./Banner.css";
 // import { IoMdArrowBack } from "react-icons/io";
 import { GoArrowRight } from "react-icons/go";
 
-//images
-import img1 from "../assets/banner/1.png";
-import img2 from "../assets/banner/2.png";
-import img3 from "../assets/banner/3.png";
-import img4 from "../assets/banner/4.png";
-
 function Banner({ data }) {
   const [slide, setSlide] = useState(0);
 
