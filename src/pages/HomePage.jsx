@@ -30,6 +30,9 @@ import img1 from "../assets/home page products/1.png"
 import img2 from "../assets/home page products/2.png"
 import img3 from "../assets/home page products/3.png"
 import img4 from "../assets/home page products/4.png"
+import star5 from "../assets/Five star.png"
+import star45 from "../assets/Four Half Star.png"
+import star4 from "../assets/Four Star.png"
 
 function HomePage() {
   return (
@@ -266,7 +269,7 @@ function HomePage() {
                       </div>
 
                       <div className={styles.starAndCommentCount}>
-                        <img src="../src/assets/Five star.png" alt="" />
+                        <img src={star5} alt="" />
                         <span>(88)</span>
                       </div>
                     </div>
@@ -308,7 +311,7 @@ function HomePage() {
                       </div>
 
                       <div className={styles.starAndCommentCount}>
-                        <img src="../src/assets/Four star.png" alt="" />
+                        <img src={star4} alt="" />
                         <span>(75)</span>
                       </div>
                     </div>
@@ -350,7 +353,7 @@ function HomePage() {
                       </div>
 
                       <div className={styles.starAndCommentCount}>
-                        <img src="../src/assets/Five star.png" alt="" />
+                        <img src={star5} alt="" />
                         <span>(99)</span>
                       </div>
                     </div>
@@ -392,7 +395,7 @@ function HomePage() {
                       </div>
 
                       <div className={styles.starAndCommentCount}>
-                        <img src="../src/assets/Four Half star.png" alt="" />
+                        <img src={star45} alt="" />
                         <span>(99)</span>
                       </div>
                     </div>
@@ -434,7 +437,7 @@ function HomePage() {
                       </div>
 
                       <div className={styles.starAndCommentCount}>
-                        <img src="../src/assets/Five star.png" alt="" />
+                        <img src={star5} alt="" />
                         <span>(88)</span>
                       </div>
                     </div>
@@ -476,7 +479,7 @@ function HomePage() {
                       </div>
 
                       <div className={styles.starAndCommentCount}>
-                        <img src="../src/assets/Four star.png" alt="" />
+                        <img src={star4} alt="" />
                         <span>(75)</span>
                       </div>
                     </div>
@@ -518,7 +521,7 @@ function HomePage() {
                       </div>
 
                       <div className={styles.starAndCommentCount}>
-                        <img src="../src/assets/Five star.png" alt="" />
+                        <img src={star5} alt="" />
                         <span>(99)</span>
                       </div>
                     </div>
@@ -560,7 +563,7 @@ function HomePage() {
                       </div>
 
                       <div className={styles.starAndCommentCount}>
-                        <img src="../src/assets/Four Half star.png" alt="" />
+                        <img src={star45} alt="" />
                         <span>(99)</span>
                       </div>
                     </div>
