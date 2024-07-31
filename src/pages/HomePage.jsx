@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 //data
 import slides from "../data/carouselData";
+import productBox from "../data/homePageData";
 
 //components
 import Category from "../components/Category";
@@ -11,8 +12,12 @@ import AllProducts from "../components/AllProducts";
 import Featured from "../components/Featured";
 import Banner from "../components/Banner";
 
+//helpful
+import discountPrice from "../helpful/discountFunction";
+
 //css
 import styles from "./HomePage.module.css";
+import "./HomePage.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -24,15 +29,6 @@ import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
 import { CgHeart } from "react-icons/cg";
 import { CgEye } from "react-icons/cg";
-
-//images
-import img1 from "../assets/home page products/1.png"
-import img2 from "../assets/home page products/2.png"
-import img3 from "../assets/home page products/3.png"
-import img4 from "../assets/home page products/4.png"
-import star5 from "../assets/Five star.png"
-import star45 from "../assets/Four Half Star.png"
-import star4 from "../assets/Four Star.png"
 
 function HomePage() {
   return (
@@ -121,7 +117,6 @@ function HomePage() {
             <div className={styles.line}></div>
 
             <div className={styles.bannerImage}>
-              {/* <img src="../src/assets/banner.png" alt="" /> */}
               <Banner data={slides} />
             </div>
           </div>
@@ -180,7 +175,6 @@ function HomePage() {
               <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={30}
-                // slidesPerView={4.5}
                 breakpoints={{
                   320: {
                     slidesPerView: 1,
@@ -234,341 +228,62 @@ function HomePage() {
                 onSwiper={(swiper) => console.log(swiper)}
                 onSlideChange={() => console.log("slide change")}
               >
-                <SwiperSlide>
-                  <div className={styles.productBox}>
-                    <div className={styles.imgDiv}>
-                      <img
-                        src={img1}
-                        alt=""
-                      />
+                {productBox.map((product, index) => {
+                  return (
+                    <SwiperSlide key={index}>
+                      <div className={styles.productBox}>
+                        <div className={styles.imgDiv}>
+                          <img src={product.src} alt={product.alt} />
 
-                      <div className={styles.iconBox}>
-                        <div>
-                          <CgHeart fontSize="18px" />
+                          <div className={styles.iconBox}>
+                            <div>
+                              <CgHeart fontSize="18px" />
+                            </div>
+                            <div>
+                              <CgEye fontSize="18px" />
+                            </div>
+                          </div>
+
+                          {product.discount !== 0 ? (
+                            <div className={styles.discountBox}>
+                              <div>-{product.discount}%</div>
+                            </div>
+                          ) : null}
+
+                          <div className={styles.addToCart}>Add To Cart</div>
                         </div>
-                        <div>
-                          <CgEye fontSize="18px" />
-                        </div>
-                      </div>
 
-                      <div className={styles.discountBox}>
-                        <div>-40%</div>
-                      </div>
+                        <div className={styles.productDetail}>
+                          <h5>{product.title}</h5>
 
-                      <div className={styles.addToCart}>Add To Cart</div>
-                    </div>
+                          <div className={styles.price}>
+                            {product.discount !== 0 ? (
+                              <span className={styles.discountPrice}>
+                                $
+                                {discountPrice(product.price, product.discount)}
+                              </span>
+                            ) : null}
 
-                    <div className={styles.productDetail}>
-                      <h5>HAVIT HV-G92 Gamepad</h5>
+                            <span className={styles.realPrice}>
+                              {product.discount !== 0 ? (
+                                <del>${product.price}</del>
+                              ) : (
+                                <span className={styles.priceWithoutDiscount}>
+                                  ${product.price}
+                                </span>
+                              )}
+                            </span>
+                          </div>
 
-                      <div className={styles.price}>
-                        <span className={styles.discountPrice}>$120</span>
-                        <span className={styles.realPrice}>
-                          <del>$160</del>
-                        </span>
-                      </div>
-
-                      <div className={styles.starAndCommentCount}>
-                        <img src={star5} alt="" />
-                        <span>(88)</span>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className={styles.productBox}>
-                    <div className={styles.imgDiv}>
-                      <img
-                        src={img2}
-                        alt=""
-                      />
-
-                      <div className={styles.iconBox}>
-                        <div>
-                          <CgHeart fontSize="18px" />
-                        </div>
-                        <div>
-                          <CgEye fontSize="18px" />
+                          <div className={styles.starAndCommentCount}>
+                            <img src={product.star} alt="" />
+                            <span>({product.numOfComments})</span>
+                          </div>
                         </div>
                       </div>
-
-                      <div className={styles.discountBox}>
-                        <div>-35%</div>
-                      </div>
-
-                      <div className={styles.addToCart}>Add To Cart</div>
-                    </div>
-
-                    <div className={styles.productDetail}>
-                      <h5>AK-900 Wired Keyboard</h5>
-
-                      <div className={styles.price}>
-                        <span className={styles.discountPrice}>$960</span>
-                        <span className={styles.realPrice}>
-                          <del>$1160</del>
-                        </span>
-                      </div>
-
-                      <div className={styles.starAndCommentCount}>
-                        <img src={star4} alt="" />
-                        <span>(75)</span>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className={styles.productBox}>
-                    <div className={styles.imgDiv}>
-                      <img
-                        src={img3}
-                        alt=""
-                      />
-
-                      <div className={styles.iconBox}>
-                        <div>
-                          <CgHeart fontSize="18px" />
-                        </div>
-                        <div>
-                          <CgEye fontSize="18px" />
-                        </div>
-                      </div>
-
-                      <div className={styles.discountBox}>
-                        <div>-30%</div>
-                      </div>
-
-                      <div className={styles.addToCart}>Add To Cart</div>
-                    </div>
-
-                    <div className={styles.productDetail}>
-                      <h5>IPS LCD Gaming Monitor</h5>
-
-                      <div className={styles.price}>
-                        <span className={styles.discountPrice}>$370</span>
-                        <span className={styles.realPrice}>
-                          <del>$400</del>
-                        </span>
-                      </div>
-
-                      <div className={styles.starAndCommentCount}>
-                        <img src={star5} alt="" />
-                        <span>(99)</span>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className={styles.productBox}>
-                    <div className={styles.imgDiv}>
-                      <img
-                        src={img4}
-                        alt=""
-                      />
-
-                      <div className={styles.iconBox}>
-                        <div>
-                          <CgHeart fontSize="18px" />
-                        </div>
-                        <div>
-                          <CgEye fontSize="18px" />
-                        </div>
-                      </div>
-
-                      <div className={styles.discountBox}>
-                        <div>-25%</div>
-                      </div>
-
-                      <div className={styles.addToCart}>Add To Cart</div>
-                    </div>
-
-                    <div className={styles.productDetail}>
-                      <h5>S-Series Comfort Chair</h5>
-
-                      <div className={styles.price}>
-                        <span className={styles.discountPrice}>$375</span>
-                        <span className={styles.realPrice}>
-                          <del>$400</del>
-                        </span>
-                      </div>
-
-                      <div className={styles.starAndCommentCount}>
-                        <img src={star45} alt="" />
-                        <span>(99)</span>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className={styles.productBox}>
-                    <div className={styles.imgDiv}>
-                      <img
-                        src={img1}
-                        alt=""
-                      />
-
-                      <div className={styles.iconBox}>
-                        <div>
-                          <CgHeart fontSize="18px" />
-                        </div>
-                        <div>
-                          <CgEye fontSize="18px" />
-                        </div>
-                      </div>
-
-                      <div className={styles.discountBox}>
-                        <div>-25%</div>
-                      </div>
-
-                      <div className={styles.addToCart}>Add To Cart</div>
-                    </div>
-
-                    <div className={styles.productDetail}>
-                      <h5>HAVIT HV-G92 Gamepad</h5>
-
-                      <div className={styles.price}>
-                        <span className={styles.discountPrice}>$120</span>
-                        <span className={styles.realPrice}>
-                          <del>$160</del>
-                        </span>
-                      </div>
-
-                      <div className={styles.starAndCommentCount}>
-                        <img src={star5} alt="" />
-                        <span>(88)</span>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className={styles.productBox}>
-                    <div className={styles.imgDiv}>
-                      <img
-                        src={img2}
-                        alt=""
-                      />
-
-                      <div className={styles.iconBox}>
-                        <div>
-                          <CgHeart fontSize="18px" />
-                        </div>
-                        <div>
-                          <CgEye fontSize="18px" />
-                        </div>
-                      </div>
-
-                      <div className={styles.discountBox}>
-                        <div>-25%</div>
-                      </div>
-
-                      <div className={styles.addToCart}>Add To Cart</div>
-                    </div>
-
-                    <div className={styles.productDetail}>
-                      <h5>AK-900 Wired Keyboard</h5>
-
-                      <div className={styles.price}>
-                        <span className={styles.discountPrice}>$960</span>
-                        <span className={styles.realPrice}>
-                          <del>$1160</del>
-                        </span>
-                      </div>
-
-                      <div className={styles.starAndCommentCount}>
-                        <img src={star4} alt="" />
-                        <span>(75)</span>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className={styles.productBox}>
-                    <div className={styles.imgDiv}>
-                      <img
-                        src={img3}
-                        alt=""
-                      />
-
-                      <div className={styles.iconBox}>
-                        <div>
-                          <CgHeart fontSize="18px" />
-                        </div>
-                        <div>
-                          <CgEye fontSize="18px" />
-                        </div>
-                      </div>
-
-                      <div className={styles.discountBox}>
-                        <div>-25%</div>
-                      </div>
-
-                      <div className={styles.addToCart}>Add To Cart</div>
-                    </div>
-
-                    <div className={styles.productDetail}>
-                      <h5>IPS LCD Gaming Monitor</h5>
-
-                      <div className={styles.price}>
-                        <span className={styles.discountPrice}>$370</span>
-                        <span className={styles.realPrice}>
-                          <del>$400</del>
-                        </span>
-                      </div>
-
-                      <div className={styles.starAndCommentCount}>
-                        <img src={star5} alt="" />
-                        <span>(99)</span>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className={styles.productBox}>
-                    <div className={styles.imgDiv}>
-                      <img
-                        src={img4}
-                        alt=""
-                      />
-
-                      <div className={styles.iconBox}>
-                        <div>
-                          <CgHeart fontSize="18px" />
-                        </div>
-                        <div>
-                          <CgEye fontSize="18px" />
-                        </div>
-                      </div>
-
-                      <div className={styles.discountBox}>
-                        <div>-25%</div>
-                      </div>
-
-                      <div className={styles.addToCart}>Add To Cart</div>
-                    </div>
-
-                    <div className={styles.productDetail}>
-                      <h5>S-Series Comfort Chair</h5>
-
-                      <div className={styles.price}>
-                        <span className={styles.discountPrice}>$375</span>
-                        <span className={styles.realPrice}>
-                          <del>$400</del>
-                        </span>
-                      </div>
-
-                      <div className={styles.starAndCommentCount}>
-                        <img src={star45} alt="" />
-                        <span>(99)</span>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
+                    </SwiperSlide>
+                  );
+                })}
               </Swiper>
             </div>
           </div>

@@ -20,6 +20,7 @@ import { BsArrowUp } from "react-icons/bs";
 
 //css
 import styles from "./Layout.module.css";
+import "./Layout.css"
 
 //images
 import qrCode from "../assets/download app/Qr Code.png"
@@ -54,12 +55,8 @@ function Layout({ children }) {
                 <h2>Exclusive</h2>
               </div>
 
-              {/* style=
-            {(isActive) => ({
-              borderBottom: isActive ? "2px solid #00000063" : "none",
-            })} */}
               <div className={styles.navbarLinks}>
-                <NavLink to="/E-commerce-website/" style={{borderBottom:"2px solid #00000063"}}>Home</NavLink>
+                <NavLink to="/E-commerce-website/">Home</NavLink>
                 <NavLink to="/contact">Contact</NavLink>
                 <NavLink to="/about">About</NavLink>
                 <NavLink to="/signup">SignUp</NavLink>

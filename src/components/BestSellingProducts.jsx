@@ -1,3 +1,6 @@
+//data
+import productBox from "../data/bestSellingData";
+
 //css
 import styles from "./BestSellingProducts.module.css";
 
@@ -5,14 +8,9 @@ import styles from "./BestSellingProducts.module.css";
 import { CgHeart } from "react-icons/cg";
 import { CgEye } from "react-icons/cg";
 
-//images
-import img1 from "../assets/this month products/1.png"
-import img2 from "../assets/this month products/2.png"
-import img3 from "../assets/this month products/3.png"
-import img4 from "../assets/this month products/4.png"
-import star5 from "../assets/Five star.png"
-import star45 from "../assets/Four Half Star.png"
-import bannerImg from "../assets/banner/second banner.png"
+//Images
+import bannerImg from "../assets/banner/second banner.png";
+import discountPrice from "../helpful/discountFunction";
 
 function BestSellingProducts() {
   return (
@@ -36,157 +34,57 @@ function BestSellingProducts() {
           </div>
 
           <div className={styles.bottomBox}>
-            {/* 1 */}
-            <div className={styles.productBox}>
-              <div className={styles.imgDiv}>
-                <img src={img1} alt="" />
+            {productBox.map((product, index) => {
+              return (
+                <div key={index} className={styles.productBox}>
+                  <div className={styles.imgDiv}>
+                    <img src={product.src} alt={product.alt} />
 
-                <div className={styles.iconBox}>
-                  <div>
-                    <CgHeart fontSize="18px" />
+                    <div className={styles.iconBox}>
+                      <div>
+                        <CgHeart fontSize="18px" />
+                      </div>
+                      <div>
+                        <CgEye fontSize="18px" />
+                      </div>
+                    </div>
+
+                    {product.discount !== 0 ? (
+                      <div className={styles.discountBox}>
+                        <div>-{product.discount}%</div>
+                      </div>
+                    ) : null}
+
+                    <div className={styles.addToCart}>Add To Cart</div>
                   </div>
-                  <div>
-                    <CgEye fontSize="18px" />
-                  </div>
-                </div>
 
-                <div className={styles.discountBox}>
-                  <div>-25%</div>
-                </div>
+                  <div className={styles.productDetail}>
+                    <h5>{product.title}</h5>
 
-                <div className={styles.addToCart}>Add To Cart</div>
-              </div>
+                    <div className={styles.price}>
+                      {product.discount !== 0 ? (
+                        <span className={styles.discountPrice}>
+                          ${discountPrice(product.price, product.discount)}
+                        </span>
+                      ) : null}
 
-              <div className={styles.productDetail}>
-                <h5>The north coat</h5>
+                      <span className={styles.realPrice}>
+                        {product.discount !== 0 ? (
+                          <del>${product.price}</del>
+                        ) : (
+                          <span className={styles.priceWithoutDiscount}>${product.price}</span>
+                        )}
+                      </span>
+                    </div>
 
-                <div className={styles.price}>
-                  <span className={styles.discountPrice}>$260</span>
-                  <span className={styles.realPrice}>
-                    <del>$360</del>
-                  </span>
-                </div>
-
-                <div className={styles.starAndCommentCount}>
-                  <img src={star5} alt="" />
-                  <span>(65)</span>
-                </div>
-              </div>
-            </div>
-
-            {/* 2 */}
-            <div className={styles.productBox}>
-              <div className={styles.imgDiv}>
-                <img src={img2} alt="" />
-
-                <div className={styles.iconBox}>
-                  <div>
-                    <CgHeart fontSize="18px" />
-                  </div>
-                  <div>
-                    <CgEye fontSize="18px" />
+                    <div className={styles.starAndCommentCount}>
+                      <img src={product.star} alt="" />
+                      <span>({product.numOfComments})</span>
+                    </div>
                   </div>
                 </div>
-
-                <div className={styles.discountBox}>
-                  <div>-25%</div>
-                </div>
-
-                <div className={styles.addToCart}>Add To Cart</div>
-              </div>
-
-              <div className={styles.productDetail}>
-                <h5>Gucci duffle bag</h5>
-
-                <div className={styles.price}>
-                  <span className={styles.discountPrice}>$960</span>
-                  <span className={styles.realPrice}>
-                    <del>$1160</del>
-                  </span>
-                </div>
-
-                <div className={styles.starAndCommentCount}>
-                  <img src={star45} alt="" />
-                  <span>(65)</span>
-                </div>
-              </div>
-            </div>
-
-            {/* 3 */}
-            <div className={styles.productBox}>
-              <div className={styles.imgDiv}>
-                <img src={img3} alt="" />
-
-                <div className={styles.iconBox}>
-                  <div>
-                    <CgHeart fontSize="18px" />
-                  </div>
-                  <div>
-                    <CgEye fontSize="18px" />
-                  </div>
-                </div>
-
-                <div className={styles.discountBox}>
-                  <div>-25%</div>
-                </div>
-
-                <div className={styles.addToCart}>Add To Cart</div>
-              </div>
-
-              <div className={styles.productDetail}>
-                <h5>RGB liquid CPU Cooler</h5>
-
-                <div className={styles.price}>
-                  <span className={styles.discountPrice}>$160</span>
-                  <span className={styles.realPrice}>
-                    <del>$170</del>
-                  </span>
-                </div>
-
-                <div className={styles.starAndCommentCount}>
-                  <img src={star45} alt="" />
-                  <span>(65)</span>
-                </div>
-              </div>
-            </div>
-
-            {/* 4 */}
-            <div className={styles.productBox}>
-              <div className={styles.imgDiv}>
-                <img src={img4} alt="" />
-
-                <div className={styles.iconBox}>
-                  <div>
-                    <CgHeart fontSize="18px" />
-                  </div>
-                  <div>
-                    <CgEye fontSize="18px" />
-                  </div>
-                </div>
-
-                {/* <div className={styles.discountBox}>
-                  <div>-25%</div>
-                </div> */}
-
-                <div className={styles.addToCart}>Add To Cart</div>
-              </div>
-
-              <div className={styles.productDetail}>
-                <h5>Small BookSelf</h5>
-
-                <div className={styles.price}>
-                  <span className={styles.discountPrice}>$360</span>
-                  <span className={styles.realPrice}>
-                    <del></del>
-                  </span>
-                </div>
-
-                <div className={styles.starAndCommentCount}>
-                  <img src={star5} alt="" />
-                  <span>(65)</span>
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
 
           {/* <div className={styles.viewAllButton}>

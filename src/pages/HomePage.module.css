@@ -30,6 +30,7 @@
 .sideMenu .menuTitle {
     font-size: 16px;
     width: 65%;
+    cursor: pointer;
 }
 
 .sideMenu .menuTitle span:hover {
@@ -310,9 +311,12 @@
 }
 
 .bottomBox .productBox .price .realPrice {
-    opacity: 50%;
-    color: #000000;
+    color: #00000084;
     font-weight: bold;
+}
+
+.bottomBox .productBox .price .priceWithoutDiscount {
+    color: #DB4444;
 }
 
 .bottomBox .productBox .price .discountPrice {
