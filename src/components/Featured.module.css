@@ -4,40 +4,14 @@
     justify-content: center;
 }
 
-.featuredMainBox {
+.featuredBox .featuredMainBox {
     width: 82%;
     height: 100%;
     padding: 0 20px;
 }
 
-.featuredMainBox .topBox {
-    width: 100%;
-    height: 103px;
-    display: flex;
-    flex-direction: column;
-}
-
-.topBox .topTitle {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.topBox .topTitle .redBox {
-    width: 20px;
-    height: 40px;
-    border-radius: 4px;
-    margin-right: 16px;
-    background-color: #DB4444;
-}
-
-.topBox .topTitle h4 {
-    font-size: 16px;
-    color: #DB4444;
-}
-
 .featuredTitle {
-    margin: 24px 87px 0 0;
+    margin-top: 24px;
 }
 
 .featuredTitle h5 {
@@ -67,7 +41,6 @@
 
 .bottomBox .leftBox img {
     width: 83%;
-    /* height: 500px; */
     background-color: #000;
 }
 
@@ -131,7 +104,6 @@
     width: 75%;
 }
 
-
 .bottomBox .rightBox .rightBottomBox {
     width: 100%;
     height: 50%;
@@ -168,26 +140,24 @@
     height: 65%;
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+    .featuredBox .featuredMainBox {
+        padding: 0 10px;
+    }
+
     .featuredTitle {
-        margin: 24px 0 0 0;
+        padding: 0 10px;
     }
 
     .featuredTitle h5 {
         font-size: 17px;
     }
 
-    .topBox .topTitle .redBox {
-        width: 15px;
-        height: 30px;
-        margin-right: 10px;
-    }
-
     .bottomBox {
         flex-direction: column;
-        margin-top: 0;
         height: 100%;
         gap: 15px;
+        padding: 0 10px;
     }
 
     .bottomBox .leftBox {
@@ -200,6 +170,7 @@
         gap: 6px;
     }
 
+    
     .bottomBox .rightBox .rightTopBox .imgDescription {
         width: 70%;
     }
@@ -228,6 +199,12 @@
 
     .bottomBox .rightBox .rightBottomBox div {
         width: 100%;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .bottomBox {
+        margin-top: 10px;
     }
 }
 
@@ -247,73 +224,20 @@
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-    .featuredTitle {
-        margin: 24px 0 0 0;
-    }
-
     .featuredTitle h5 {
-        font-size: 17px;
+        font-size: 23px;
     }
-
-    .topBox .topTitle .redBox {
-        width: 15px;
-        height: 30px;
-        margin-right: 10px;
-    }
-
+    
     .bottomBox {
-        flex-direction: column;
-        margin-top: 0;
-        height: 100%;
-        gap: 15px;
+        margin-top: 25px;
     }
-
-    .bottomBox .leftBox {
-        width: 100%;
-    }
-
+    
     .bottomBox .leftBox img {
         width: 50%;
-    }
-
-    .bottomBox .leftBox .imgDescription, .bottomBox .rightBox .rightTopBox .imgDescription, .bottomBox .rightBox .rightBottomBox div .imgDescription {
-        left: 15px;
-        bottom: 10px;
-        gap: 6px;
     }
 
     .bottomBox .rightBox .rightBottomBox .rightBottomBoxLeft img, .bottomBox .rightBox .rightBottomBox .rightBottomBoxRight img {
         width: 50%;
         height: 70%;
-    }
-
-    .bottomBox .rightBox .rightTopBox .imgDescription {
-        width: 70%;
-    }
-
-    .imgDescription h5 {
-        font-size: 16px;
-    }
-
-    .imgDescription span {
-        font-size: 12px;   
-    }
-
-    .imgDescription a {
-        font-size: 13px;
-    }
-
-    .bottomBox .rightBox {
-        width: 100%;
-        gap: 10px;
-    }
-
-    .bottomBox .rightBox .rightBottomBox {
-        height: 155px;
-        gap: 10px;
-    }
-
-    .bottomBox .rightBox .rightBottomBox div {
-        width: 100%;
     }
 }

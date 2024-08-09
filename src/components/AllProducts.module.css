@@ -4,63 +4,32 @@
     justify-content: center;
 }
 
-.allProductsMainBox {
+.allProductsBox .allProductsMainBox {
     width: 82%;
     height: 100%;
     padding: 0 20px;
 }
 
-.allProductsMainBox .topBox {
-    width: 100%;
-    height: 103px;
-    display: flex;
-    flex-direction: column;
-}
-
-.topBox .ourProductsTitle {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.topBox .ourProductsTitle .redBox {
-    width: 20px;
-    height: 40px;
-    border-radius: 4px;
-    margin-right: 16px;
-    background-color: #DB4444;
-}
-
-.topBox .ourProductsTitle h4 {
-    font-size: 16px;
-    color: #DB4444;
-}
-
-.topBox .ourProductsDetail {
+.allProductsBox .allProductsMainBox .ourProductsDetail {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-top: 24px;
 }
 
-.topBox .ourProductsDetail .ourProductsTitle {
-    margin: 24px 87px 0 0;
-}
-
-.topBox .ourProductsDetail .ourProductsTitle h5 {
+.allProductsBox .allProductsMainBox .ourProductsDetail .ourProductsTitle h5 {
     font-size: 36px;
 } 
 
-.topBox .ourProductsDetail .arrows {
+.allProductsBox .allProductsMainBox .ourProductsDetail .arrows {
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
-    /* width: 100px; */
     gap: 5px;
     height: 46px;
 }
 
-.arrows .arrowLeft, .arrows .arrowRight {
+.allProductsBox .allProductsMainBox .ourProductsDetail .arrows .arrowLeft, .allProductsBox .allProductsMainBox .ourProductsDetail .arrows .arrowRight {
     width: 46px;
     height: 46px;
     background-color: #F5F5F5;
@@ -71,254 +40,38 @@
     cursor: pointer;
 }
 
-.arrowLeft:hover, .arrowRight:hover {
+.allProductsBox .allProductsMainBox .ourProductsDetail .arrowLeft:hover, .allProductsBox .allProductsMainBox .ourProductsDetail .arrowRight:hover {
     background-color: #cdcbcb;
 }
 
 .bottomBox {
-    margin: 60px 0;
+    margin-top: 60px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 30px;
     row-gap: 60px;
-    /* grid-auto-rows: minmax(100px, auto); */
-}
-
-.bottomBox .productBox .imgDiv {
-    width: 100%;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #F5F5F5;
-    margin-bottom: 16px;
-    border-radius: 4px;
-    position: relative;
-    cursor: pointer;
-}
-
-.bottomBox .productBox .iconBox {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
-.bottomBox .productBox .iconBox div {
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background-color: #FFFF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
-}
-
-.bottomBox .productBox .discountBox {
-    width: 55px;
-    height: 26px;
-    border-radius: 4px;
-    background-color: #DB4444;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
-
-.bottomBox .productBox .newBox {
-    width: 55px;
-    height: 26px;
-    border-radius: 4px;
-    background-color: #00FF66;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
-
-.bottomBox .productBox .newBox div {
-    font-size: 12px;
-    color: #FAFAFA;
-} 
-
-.bottomBox .productBox .discountBox div {
-    font-size: 12px;
-    color: #FAFAFA;
-}
-
-.bottomBox .productBox .addToCart {
-    width: 100%;
-    height: 41px;
-    background-color: #000000;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    color: #FFFFFF;
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    visibility: hidden;
-}
-
-.bottomBox .productBox .imgDiv:hover .addToCart {
-    visibility: visible;
-}
-
-.bottomBox .productBox .imgDiv img {
-    width: 130px;
-    height: 120px;
-}
-
-.bottomBox .productBox .productDetail {
-    display: flex;
-    flex-direction: column;
-    padding-left: 11px;
-    gap: 8px;
-}
-
-.bottomBox .productBox .productDetail h5 {
-    font-size: 16px;
-}
-
-.bottomBox .productBox .price .realPrice {
-    color: #00000084;
-    font-weight: bold;
-}
-
-.bottomBox .productBox .price .priceWithoutDiscount {
-    color: #DB4444;
-}
-
-.bottomBox .productBox .price .discountPrice {
-    color: #DB4444;
-    font-size: 16px;
-    margin-right: 12px;
-    font-weight: bold;
-}
-
-.bottomBox .productBox .starAndCommentCount {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.bottomBox .productBox .starAndCommentCount span {
-    opacity: 50%;
-    color: #000000;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.bottomBox .productBox .colorCircle {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
-}
-
-.bottomBox .productBox .colorCircle .outerCircle {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} 
-
-.bottomBox .productBox .colorCircle .outerCircle:first-child {
-    border: 2px solid black;
-}
-
-.bottomBox .productBox .colorCircle .outerCircle div {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    /* background-color: #FB1314; */
-}
-
-/* .bottomBox .productBox .colorCircle .outerCircle:nth-child(2) {
-    background-color: #DB4444;
-}  */
-
-.allProductButton {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 100px;
-    cursor: pointer;
-}
-
-.allProductButton .mainButton {
-    width: 234px;
-    height: 56px;
-    background-color: #DB4444;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.mainButton span {
-    color: #FAFAFA;
-    font-size: 16px
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
-    /* .allProductsBox {
-        margin-bottom: 60px;
-    } */
-    
-    .allProductsMainBox {
+    .allProductsBox .allProductsMainBox {
         padding: 0 10px;
     }
 
-    .topBox .ourProductsTitle .redBox {
-        width: 15px;
-        height: 30px;
-        margin-right: 10px;
-    }
-
-    .topBox .ourProductsDetail {
+    .allProductsBox .allProductsMainBox .ourProductsDetail {
         flex-direction: column;
-        gap: 10px;
+        gap: 20px;
         align-items: flex-start;
+        padding: 0 10px;
     }
 
-    .topBox .ourProductsDetail .ourProductsTitle {
-        margin: 24px 0 0 0;
-    }
-
-    .topBox .ourProductsDetail .ourProductsTitle h5 {
+    .allProductsBox .allProductsMainBox .ourProductsDetail .ourProductsTitle h5 {
         font-size: 17px;
     }
 
     .bottomBox {
+        margin-top: 10px;
         grid-template-columns: repeat(1, 1fr);
-        margin: 50px 0;
         row-gap: 40px;
-    }
-
-    .allProductButton {
-        margin: 20px 0 70px 0;
-    }
-
-    .allProductButton .mainButton {
-        width: 150px;
-        height: 50px;
-    }
-
-    .allProductButton .mainButton span {
-        font-size: 13px;
     }
 }
 
@@ -329,30 +82,15 @@
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-    /* .allProductsBox {
-        margin-bottom: 60px;
-    } */
-    
-    .allProductsMainBox {
+    .allProductsBox .allProductsMainBox {
         padding: 0 10px;
     }
 
-    .topBox .ourProductsTitle .redBox {
-        width: 20px;
-        height: 35px;
-        margin-right: 10px;
-    }
-
-    .topBox .ourProductsDetail {
+    .allProductsBox .allProductsMainBox .ourProductsDetail {
         gap: 10px;
-        align-items: flex-start;
     }
 
-    .topBox .ourProductsDetail .ourProductsTitle {
-        margin: 13px 0 0 0;
-    }
-
-    .topBox .ourProductsDetail .ourProductsTitle h5 {
+    .allProductsBox .allProductsMainBox .ourProductsDetail .ourProductsTitle h5 {
         font-size: 23px;
     }
 
@@ -361,14 +99,6 @@
         margin-top: 25px;
         row-gap: 40px;
         column-gap: 15px;
-    }
-
-    .allProductButton {
-        margin: 0 0 70px 0;
-    }
-
-    .allProductButton .mainButton span {
-        font-size: 13px;
     }
 }
  

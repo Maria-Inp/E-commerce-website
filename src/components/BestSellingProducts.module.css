@@ -1,59 +1,29 @@
 .bestSellingBox {
     width: 100%;
-    /* height: 493px; */
     display: flex;
     justify-content: center;
     margin-bottom: 100px;
 }
 
-.bestSellingMainBox {
+.bestSellingBox .bestSellingMainBox {
     width: 82%;
     height: 100%;
     padding: 0 20px;
 }
 
-.bestSellingMainBox .topBox {
-    width: 100%;
-    height: 103px;
-    display: flex;
-    flex-direction: column;
-}
-
-.topBox .thisMonthTitle {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.topBox .thisMonthTitle h4 {
-    font-size: 16px;
-    color: #DB4444;
-}
-
-.topBox .thisMonthTitle .redBox {
-    width: 20px;
-    height: 40px;
-    border-radius: 4px;
-    margin-right: 16px;
-    background-color: #DB4444;
-}
-
-.topBox .bestSellingDetail {
+.bestSellingBox .bestSellingMainBox .bestSellingDetail {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-top: 24px;
 }
 
-.topBox .bestSellingDetail .BestSellingTitle {
-    margin: 24px 87px 0 0;
-}
-
-.topBox .bestSellingDetail .BestSellingTitle h5 {
+.bestSellingBox .bestSellingMainBox .bestSellingDetail .BestSellingTitle h5 {
     font-size: 36px;
 }
 
-.topBox .bestSellingDetail .viewAllButton {
+.bestSellingBox .bestSellingMainBox .bestSellingDetail .viewAllButton {
     width: 159px;
     height: 56px;
     border-radius: 4px;
@@ -71,126 +41,6 @@
     grid-template-columns: repeat(4, 1fr);
     column-gap: 30px;
     margin-top: 60px;
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 30px; */
-}
-
-.bottomBox .productBox .imgDiv {
-    width: 100%;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #F5F5F5;
-    margin-bottom: 16px;
-    border-radius: 4px;
-    position: relative;
-    cursor: pointer;
-}
-
-.bottomBox .productBox .iconBox {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
-.bottomBox .productBox .iconBox div {
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background-color: #FFFF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
-}
-
-.bottomBox .productBox .discountBox {
-    width: 55px;
-    height: 26px;
-    border-radius: 4px;
-    background-color: #DB4444;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
-
-.bottomBox .productBox .discountBox div {
-    font-size: 12px;
-    color: #FAFAFA;
-}
-
-.bottomBox .productBox .addToCart {
-    width: 100%;
-    height: 41px;
-    background-color: #000000;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    color: #FFFFFF;
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    visibility: hidden;
-}
-
-.bottomBox .productBox .imgDiv:hover .addToCart {
-    visibility: visible;
-}
-
-.bottomBox .productBox .imgDiv img {
-    width: 130px;
-    height: 120px;
-}
-
-.bottomBox .productBox .productDetail {
-    display: flex;
-    flex-direction: column;
-    padding-left: 11px;
-    gap: 8px;
-}
-
-.bottomBox .productBox .productDetail h5 {
-    font-size: 16px;
-}
-
-.bottomBox .productBox .price .realPrice {
-    color: #00000084;
-    font-weight: bold;
-}
-
-.bottomBox .productBox .price .priceWithoutDiscount {
-    color: #DB4444;
-}
-
-.bottomBox .productBox .price .discountPrice {
-    color: #DB4444;
-    font-size: 16px;
-    margin-right: 12px;
-    font-weight: bold;
-}
-
-.bottomBox .productBox .starAndCommentCount {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.bottomBox .productBox .starAndCommentCount span {
-    opacity: 50%;
-    color: #000000;
-    font-size: 14px;
-    font-weight: bold;
 }
 
 .bannerBox {
@@ -206,7 +56,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* justify-content: space-between; */
     padding: 50px;
     margin-bottom: 100px;
 }
@@ -284,41 +133,17 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
-    .bestSellingBox {
-        margin-bottom: 60px;
-    }
-    
-    .bestSellingMainBox {
+    .bestSellingBox .bestSellingMainBox {
         padding: 0 10px;
     }
 
-    .topBox .thisMonthTitle .redBox {
-        width: 15px;
-        height: 30px;
-        margin-right: 10px;
-    }
-
-    .topBox .bestSellingDetail .BestSellingTitle {
-        margin: 24px 0 0 0;
+    .bestSellingBox .bestSellingMainBox .bestSellingDetail {
         padding: 0 10px;
-    }
-
-    .topBox .bestSellingDetail .BestSellingTitle h5 {
-        font-size: 17px;
-    }
-
-    .topBox .bestSellingDetail .viewAllButton {
-        display: none;
     }
 
     .bottomBox {
-        margin-top: 0;
-        grid-template-columns: repeat(1, 1fr);
+        margin-top: 25px;
         row-gap: 40px;
-    }
-
-    .bottomBox .productBox {
-        width: 100%;
     }
 
     .bannerBox {
@@ -327,10 +152,10 @@
 
     .bannerBox .bannerBoxImage {
         padding: 13px;
-        flex-direction: column-reverse;
         margin-bottom: 70px;
     }
 
+    
     .bannerBox .bannerBoxImage .leftBox {
         width: 100%;
     }
@@ -372,6 +197,76 @@
     .rightBox {
         width: 100%;
         filter: drop-shadow(0 0 3rem #D9D9D9);
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .bestSellingBox {
+        margin-bottom: 15px;
+    }
+    
+    .bestSellingBox .bestSellingMainBox .bestSellingDetail .BestSellingTitle h5 {
+        font-size: 17px;
+    }
+
+    .bestSellingBox .bestSellingMainBox .bestSellingDetail .viewAllButton {
+        display: none;
+    }
+
+    .bestSellingBox .bestSellingMainBox .viewAllButtonMin {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin: 45px 0;
+    }
+
+    .bestSellingBox .bestSellingMainBox .viewAllButtonMin div {
+        width: 150px;
+        height: 50px;
+        background-color: #DB4444;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FAFAFA;
+        font-size: 13px
+    }
+
+    .bottomBox {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .bannerBox .bannerBoxImage {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .bestSellingBox {
+        margin-bottom: 60px;
+    }
+
+    .bestSellingBox .bestSellingMainBox .bestSellingDetail .BestSellingTitle h5 {
+        font-size: 23px;
+    }
+
+    .bestSellingBox .bestSellingMainBox .bestSellingDetail .viewAllButton { 
+        width: 120px;
+        height: 40px;
+        font-size: 13px;
+    }
+
+    .bottomBox {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 15px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .bestSellingBox .bestSellingMainBox .viewAllButtonMin {
+        display: none;
     }
 }
 
@@ -396,99 +291,5 @@
 @media screen and (min-width: 651px) and (max-width: 768px) {
     .bannerBox .bannerBoxImage {
         flex-direction: row;
-    }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    .bestSellingBox {
-        margin-bottom: 60px;
-    }
-    
-    .bestSellingMainBox {
-        padding: 0 10px;
-    }
-
-    .topBox .thisMonthTitle .redBox {
-        width: 20px;
-        height: 35px;
-        margin-right: 10px;
-    }
-
-    .topBox .bestSellingDetail .BestSellingTitle {
-        margin: 13px 0 0 0;
-        padding: 0 10px;
-    }
-
-    .topBox .bestSellingDetail .BestSellingTitle h5 {
-        font-size: 23px;
-    }
-
-    .topBox .bestSellingDetail .viewAllButton { 
-        width: 120px;
-        height: 40px;
-        font-size: 13px;
-    }
-
-    .bottomBox {
-        margin-top: 25px;
-        grid-template-columns: repeat(3, 1fr);
-        row-gap: 40px;
-        column-gap: 15px;
-    }
-
-    .bottomBox .productBox {
-        width: 100%;
-    }
-
-    .bannerBox {
-        padding: 0;
-    }
-
-    .bannerBox .bannerBoxImage {
-        padding: 13px;
-        margin-bottom: 70px;
-    }
-
-    .bannerBox .bannerBoxImage .leftBox {
-        width: 100%;
-    }
-
-    .leftBox .firstTitle {
-        font-size: 13px;
-    }
-
-    .leftBox .secondTitle {
-        font-size: 18px;
-    }
-
-    .leftBox .clockBox {
-        gap: 5px;
-    }
-
-    .leftBox .clockCircle {
-        width: 35px;
-        height: 35px;
-    }
-    
-    .leftBox .clockCircle h6 {
-        font-size: 13px;
-    }
-    
-    .leftBox .clockCircle span {
-        font-size: 7px;
-    }
-
-    .leftBox .buyNowButton {
-        width: 80px;
-        height: 35px;
-    }
-
-    .leftBox .buyNowButton div {
-        font-size: 13px;
-    }
-
-    .rightBox {
-        width: 100%;
-        filter: drop-shadow(0 0 3rem #D9D9D9);
     }
 }

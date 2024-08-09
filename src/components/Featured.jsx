@@ -1,24 +1,26 @@
+//css
 import styles from "./Featured.module.css";
+import title from "../css/ProductsMainTitle.module.css";
 
 //images
-import img1 from "../assets/arrival product/1.png"
-import img2 from "../assets/arrival product/2.png"
-import img3 from "../assets/arrival product/3.png"
-import img4 from "../assets/arrival product/4.png"
+import img1 from "../assets/arrival product/1.png";
+import img2 from "../assets/arrival product/2.png";
+import img3 from "../assets/arrival product/3.png";
+import img4 from "../assets/arrival product/4.png";
 
 function Featured() {
   return (
     <div className={styles.featuredBox}>
       <div className={styles.featuredMainBox}>
-        <div className={styles.topBox}>
-          <div className={styles.topTitle}>
-            <div className={styles.redBox}></div>
+        <div className={title.topBox}>
+          <div className={title.topBoxTitle}>
+            <div className={title.redBox}></div>
             <h4>Featured</h4>
           </div>
+        </div>
 
-          <div className={styles.featuredTitle}>
-            <h5>New Arrival</h5>
-          </div>
+        <div className={styles.featuredTitle}>
+          <h5>New Arrival</h5>
         </div>
 
         <div className={styles.bottomBox}>

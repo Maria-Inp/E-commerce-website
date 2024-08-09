@@ -1,0 +1,216 @@
+.todayProductsBox {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.todayProductsBox .todayMainBox {
+    width: 82%;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.todayProductsBox .todayMainBox .todayDetail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.todayProductsBox .todayMainBox .todayDetail .leftDetailBox {
+    display: flex;
+    flex-direction: row;
+}
+
+.todayProductsBox .todayMainBox .todayDetail .leftDetailBox .saleTitle {
+    margin: 0px 60px 0 0;
+}
+
+.todayProductsBox .todayMainBox .todayDetail .leftDetailBox .saleTitle h5 {
+    font-size: 36px;
+}
+
+.todayProductsBox .todayMainBox .todayDetail .leftDetailBox .saleClock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.todayProductsBox .todayMainBox .todayDetail .leftDetailBox .saleClock div:nth-child(2n+1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.todayProductsBox .todayMainBox .todayDetail .leftDetailBox .saleClock div:nth-child(2n) {
+    color: #E07575;
+    font-size: 32px;
+    margin: 15px 8px 0px 8px;
+}
+
+.todayProductsBox .todayMainBox .todayDetail .leftDetailBox .saleClock div:nth-child(2n+1) span {
+    font-size: 12px;
+}
+
+.todayProductsBox .todayMainBox .todayDetail .leftDetailBox .saleClock div:nth-child(2n+1) h3 {
+    font-size: 32px;
+    height: 38px;
+}
+
+.todayProductsBox .todayMainBox .todayDetail .arrows {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    gap: 5px;
+    height: 46px;
+}
+
+.todayProductsBox .todayMainBox .todayDetail .arrows .arrowLeft, .todayProductsBox .todayMainBox .todayDetail .arrows .arrowRight {
+    width: 46px;
+    height: 46px;
+    background-color: #F5F5F5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.todayProductsBox .todayMainBox .todayDetail .arrows .arrowLeft:hover, .todayProductsBox .todayMainBox .todayDetail .arrows .arrowRight:hover {
+    background-color: #cdcbcb;
+}
+
+.todayProductsBox .todayMainBox .todayDetail .arrows .disabledLeft, .todayProductsBox .todayMainBox .todayDetail .arrows .disabledRight {
+    color: rgba(0, 0, 0, 0.3) !important;
+    width: 46px;
+    height: 46px;
+    background-color: rgba(245, 245, 245);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+}
+
+.todayProductsBox .todayMainBox .bottomBox {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .todayProductsBox .todayMainBox .todayDetail .leftDetailBox {
+        flex-direction: column;
+    }
+
+    .todayProductsBox .todayMainBox .todayDetail .leftDetailBox .saleTitle {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .todayProductsBox .todayMainBox .todayDetail .leftDetailBox {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .todayProductsBox .todayMainBox .todayDetail .leftDetailBox .saleTitle {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+    .todayProductsBox {
+        margin-top: 50px;
+    }
+
+    .todayProductsBox .todayMainBox {
+        padding: 0 10px;
+    }
+    
+    .todayProductsBox .todayMainBox .todayDetail {
+        padding: 0 10px;
+    }
+
+    .todayProductsBox .todayMainBox .todayDetail .leftDetailBox {
+        gap: 10px;
+    }
+
+    .todayProductsBox .todayMainBox  .todayDetail .leftDetailBox .saleClock div:nth-child(2n+1) span {
+        font-size: 10px;
+    }
+
+    .todayProductsBox .todayMainBox  .todayDetail .leftDetailBox .saleClock div:nth-child(2n+1) h3 {
+        font-size: 20px;
+    }
+
+    .todayProductsBox .todayMainBox  .todayDetail .leftDetailBox .saleClock div:nth-child(2n) {
+        font-size: 23px;
+        margin: 6px 8px 0px 8px;
+    }
+
+    .todayProductsBox .todayMainBox .todayDetail .arrows {
+        width: 85px;
+    }
+
+    .todayProductsBox .todayMainBox .todayDetail .arrows .arrowLeft, .todayProductsBox .todayMainBox .todayDetail .arrows .arrowRight {
+        width: 40px;
+        height: 40px;
+    }
+
+    .todayProductsBox .todayMainBox .todayDetail .arrows .disabledLeft, .todayProductsBox .todayMainBox .todayDetail .arrows .disabledRight {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .todayProductsBox .todayMainBox .todayDetail {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .todayProductsBox .todayMainBox .todayDetail .leftDetailBox .saleTitle h5 {
+        font-size: 17px;
+    }
+
+    .todayProductsBox .todayMainBox .todayDetail .leftDetailBox .saleClock {
+        gap: 0;
+    }
+
+    .todayProductsBox .todayMainBox .bottomBox {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .todayMainBox {
+        padding: 0 10px;
+    }
+
+
+    .todayProductsBox .todayMainBox .todayDetail .leftDetailBox .saleTitle h5 {
+        font-size: 23px;
+    }
+
+    .todayProductsBox .todayMainBox  .todayDetail .leftDetailBox .saleClock {
+        padding: 0 10px;
+    }
+
+    .todayProductsBox .todayMainBox .bottomBox {
+        margin-top: 25px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .todayProductsBox .todayMainBox .todayDetail {
+        align-items: center;
+    }
+
+    .todayProductsBox .todayMainBox .todayDetail .leftDetailBox {
+        align-items: center;
+    }
+}

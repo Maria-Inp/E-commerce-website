@@ -1,6 +1,9 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 
+//data
+import slides from "../data/carouselData";
+
 //css
 import "./Banner.css";
 
@@ -9,7 +12,7 @@ import "./Banner.css";
 // import { IoMdArrowBack } from "react-icons/io";
 import { GoArrowRight } from "react-icons/go";
 
-function Banner({ data }) {
+function Banner() {
   const [slide, setSlide] = useState(0);
 
   // const nextSlide = () => {
@@ -24,7 +27,7 @@ function Banner({ data }) {
     <div className="carousel">
       {/* <IoMdArrowBack className="arrow arrow-left" onClick={prevSlide} /> */}
 
-      {data.map((item, index) => {
+      {slides.map((item, index) => {
         return (
           <>
             <img
@@ -45,7 +48,7 @@ function Banner({ data }) {
       {/* <IoMdArrowForward className="arrow arrow-right" onClick={nextSlide} /> */}
 
       <span className="indicators">
-        {data.map((_, index) => {
+        {slides.map((_, index) => {
           return (
             <button
               key={index}

@@ -3,6 +3,8 @@ import productBox from "../data/bestSellingData";
 
 //css
 import styles from "./BestSellingProducts.module.css";
+import title from "../css/ProductsMainTitle.module.css";
+import box from "../css/ProductBoxStyle.module.css";
 
 //icons
 import { CgHeart } from "react-icons/cg";
@@ -17,30 +19,30 @@ function BestSellingProducts() {
     <>
       <div className={styles.bestSellingBox}>
         <div className={styles.bestSellingMainBox}>
-          <div className={styles.topBox}>
-            <div className={styles.thisMonthTitle}>
-              <div className={styles.redBox}></div>
+          <div className={title.topBox}>
+            <div className={title.topBoxTitle}>
+              <div className={title.redBox}></div>
               <h4>This Month</h4>
             </div>
+          </div>
 
-            <div className={styles.bestSellingDetail}>
-              <div className={styles.BestSellingTitle}>
-                <h5>Best Selling Products</h5>
-              </div>
-              <div className={styles.viewAllButton}>
-                <div>View All</div>
-              </div>
+          <div className={styles.bestSellingDetail}>
+            <div className={styles.BestSellingTitle}>
+              <h5>Best Selling Products</h5>
+            </div>
+            <div className={styles.viewAllButton}>
+              <div>View All</div>
             </div>
           </div>
 
           <div className={styles.bottomBox}>
             {productBox.map((product, index) => {
               return (
-                <div key={index} className={styles.productBox}>
-                  <div className={styles.imgDiv}>
+                <div key={index} className={box.productBox}>
+                  <div className={box.imgDiv}>
                     <img src={product.src} alt={product.alt} />
 
-                    <div className={styles.iconBox}>
+                    <div className={box.iconBox}>
                       <div>
                         <CgHeart fontSize="18px" />
                       </div>
@@ -50,34 +52,36 @@ function BestSellingProducts() {
                     </div>
 
                     {product.discount !== 0 ? (
-                      <div className={styles.discountBox}>
+                      <div className={box.discountBox}>
                         <div>-{product.discount}%</div>
                       </div>
                     ) : null}
 
-                    <div className={styles.addToCart}>Add To Cart</div>
+                    <div className={box.addToCart}>Add To Cart</div>
                   </div>
 
-                  <div className={styles.productDetail}>
+                  <div className={box.productDetail}>
                     <h5>{product.title}</h5>
 
-                    <div className={styles.price}>
+                    <div className={box.price}>
                       {product.discount !== 0 ? (
-                        <span className={styles.discountPrice}>
+                        <span className={box.discountPrice}>
                           ${discountPrice(product.price, product.discount)}
                         </span>
                       ) : null}
 
-                      <span className={styles.realPrice}>
+                      <span className={box.realPrice}>
                         {product.discount !== 0 ? (
                           <del>${product.price}</del>
                         ) : (
-                          <span className={styles.priceWithoutDiscount}>${product.price}</span>
+                          <span className={box.priceWithoutDiscount}>
+                            ${product.price}
+                          </span>
                         )}
                       </span>
                     </div>
 
-                    <div className={styles.starAndCommentCount}>
+                    <div className={box.starAndCommentCount}>
                       <img src={product.star} alt="" />
                       <span>({product.numOfComments})</span>
                     </div>
@@ -87,9 +91,9 @@ function BestSellingProducts() {
             })}
           </div>
 
-          {/* <div className={styles.viewAllButton}>
+          <div className={styles.viewAllButtonMin}>
             <div>View All</div>
-          </div> */}
+          </div>
         </div>
       </div>
 

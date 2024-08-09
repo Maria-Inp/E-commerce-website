@@ -1,0 +1,151 @@
+.bannerBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.bannerBox .mainBox {
+    width: 82%;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.bannerBox .mainBox .sideMenu {
+    width: 25%;
+    height: 100%;
+    margin-top: 30px;
+    position: relative;
+}
+
+.bannerBox .mainBox .sideMenu .menuTitle {
+    font-size: 16px;
+    width: 65%;
+    cursor: pointer;
+}
+
+.bannerBox .mainBox .sideMenu .menuTitle span:hover {
+    border-bottom: 2px solid #00000063;
+}
+
+.bannerBox .mainBox .sideMenu .menuTitle:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.bannerBox .mainBox .sideMenu .womanFashion, .bannerBox .mainBox .sideMenu .menFashion {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    cursor: pointer;
+}
+
+.bannerBox .mainBox .sideMenu .womanFashion:hover .dropdown1, .bannerBox .mainBox .sideMenu .menFashion:hover .dropdown1 {
+    display: block;
+}
+
+.bannerBox .mainBox .sideMenu .womanFashion .dropdown1, .bannerBox .mainBox .sideMenu .menFashion .dropdown1 {
+    display: none;
+    min-width: 100px;
+    position: absolute;
+    left: 71%;
+    top: 0px;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.chevronRight .dropdown1 ul {
+    list-style-type: none;
+}
+
+.chevronRight .dropdown1 ul li a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 4px;
+} 
+
+.chevronRight .dropdown1 ul li a:hover {
+    background-color: #ddd;
+}
+
+.line {
+    height: 384px;
+    border: 1px solid #d5d5d5;
+    position: absolute;
+    left: 26%;
+}
+
+.bannerImage {
+    margin-top: 35px;
+    width: 75%;
+    height: 344px;
+}
+
+.bannerImage img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+    .bannerBox .mainBox .sideMenu {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .bannerBox .mainBox .sideMenu .menuTitle {
+        font-size: 12px;
+    }
+
+    .chevronRight .dropdown1 ul li a {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+
+    .bannerImage {
+        margin-top: 15px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .bannerBox .mainBox {
+        flex-direction: column-reverse;
+        padding: 0 10px;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .bannerImage {
+        height: 150px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .bannerBox .mainBox {
+        align-items: center;
+    }
+
+    .line {
+        left: 43%;
+        height: 310px;
+    }
+
+    .bannerImage {
+        height: 175px;
+    }
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .bannerImage {
+        width: 100%;
+        height: 200px;
+    }
+}

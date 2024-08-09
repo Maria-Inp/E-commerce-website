@@ -1,0 +1,33 @@
+.topBox .topBoxTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.topBox .topBoxTitle .redBox {
+    width: 20px;
+    height: 40px;
+    border-radius: 4px;
+    margin-right: 16px;
+    background-color: #DB4444;
+}
+
+.topBox .topBoxTitle h4{
+    font-size: 16px;
+    color: #DB4444;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .topBox .todayTitle .redBox {
+        width: 15px;
+        height: 30px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .topBox .todayTitle .redBox {
+        width: 20px;
+        height: 35px;
+    }
+}

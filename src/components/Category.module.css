@@ -1,61 +1,35 @@
 .categoryBox {
     width: 100%;
-    /* height: 313px; */
     display: flex;
     justify-content: center;
 }
 
-.categoryMainBox {
+.categoryBox .categoryMainBox {
     width: 82%;
     height: 100%;
     padding: 0 20px;
 }
 
-.categoryMainBox .topBox {
-    width: 100%;
-    height: 103px;
-    display: flex;
-    flex-direction: column;
-}
-
-.topBox .categoryTitle {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.topBox .categoryTitle .redBox {
-    width: 20px;
-    height: 40px;
-    border-radius: 4px;
-    margin-right: 16px;
-    background-color: #DB4444;
-}
-
-.topBox .categoryTitle h4{
-    font-size: 16px;
-    color: #DB4444;
-}
-
-.categorySecondTitle {
+.categoryBox .categoryMainBox .categoryDetail {
     display: flex;
     justify-content: space-between;
     margin-top: 24px;
 }
 
-.categorySecondTitle h5 {
+.categoryBox .categoryMainBox .categoryDetail h5 {
     font-size: 36px;
 }
 
-.arrows {
+.categoryBox .categoryMainBox .categoryDetail .arrows {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100px;
+    gap: 5px;
     height: 46px;
 }
 
-.arrows .arrowLeft, .arrows .arrowRight {
+.categoryBox .categoryMainBox .categoryDetail .arrows .arrowLeft, .categoryBox .categoryMainBox .categoryDetail .arrows .arrowRight {
     width: 46px;
     height: 46px;
     background-color: #F5F5F5;
@@ -66,8 +40,20 @@
     cursor: pointer;
 }
 
-.arrowLeft:hover, .arrowRight:hover {
+.categoryBox .categoryMainBox .categoryDetail .arrowLeft:hover, .categoryBox .categoryMainBox .categoryDetail .arrowRight:hover {
     background-color: #cdcbcb;
+}
+
+.categoryBox .categoryMainBox .categoryDetail .arrows .disabledLeft, .categoryBox .categoryMainBox .categoryDetail .arrows .disabledRight {
+    cursor: default;
+    color: rgba(0, 0, 0, 0.3) !important;
+    width: 46px;
+    height: 46px;
+    background-color: #F5F5F5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bottomBox {
@@ -112,38 +98,47 @@
     margin: 60px 0;
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 1024px) {
     .categoryMainBox {
         padding: 0 10px;
     }
 
-    .topBox .categoryTitle .redBox {
-        width: 15px;
-        height: 30px;
-        margin-right: 10px;
-    }
-
-    .categorySecondTitle {
+    .categoryBox .categoryMainBox .categoryDetail {
         flex-direction: column;
         gap: 10px;
         padding: 0 10px;
     }
 
-    .categorySecondTitle h5 {
-        font-size: 17px;
-    }
-
-    .arrows {
+    .categoryBox .categoryMainBox .categoryDetail .arrows {
         width: 85px;
     }
 
-    .arrows .arrowLeft, .arrows .arrowRight {
+    .categoryBox .categoryMainBox .categoryDetail .arrows .arrowLeft, .categoryBox .categoryMainBox .categoryDetail .arrows .arrowRight {
         width: 40px;
         height: 40px;
     }
 
+    .categoryBox .categoryMainBox .categoryDetail .arrows .disabledLeft, .categoryBox .categoryMainBox .categoryDetail .arrows .disabledRight {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .horizontalLine div {
+        margin: 50px 0;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .categoryBox .categoryMainBox .categoryDetail {
+        flex-direction: column;
+    }
+
+    .categoryBox .categoryMainBox .categoryDetail h5 {
+        font-size: 17px;
+    }
+
     .bottomBox {
-        margin-top: 50px;
+        margin-top: 10px;
     }
 
     .bottomBox .categoryCard {
@@ -155,40 +150,15 @@
     .bottomBox .categoryCard div {
         font-size: 13px;
     }
-
-    .horizontalLine div {
-        margin: 50px 0;
-    }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-    .categoryMainBox {
-        padding: 0 10px;
-    }
-
-    .topBox .categoryTitle .redBox {
-        width: 20px;
-        height: 35px;
-        margin-right: 10px;
-    }
-
-    .categorySecondTitle {
-        gap: 10px;
-        padding: 0 10px;
+    .categoryBox .categoryMainBox .categoryDetail {
         margin-top: 13px;
     }
 
-    .categorySecondTitle h5 {
+    .categoryBox .categoryMainBox .categoryDetail h5 {
         font-size: 23px;
-    }
-
-    .arrows {
-        width: 85px;
-    }
-
-    .arrows .arrowLeft, .arrows .arrowRight {
-        width: 40px;
-        height: 40px;
     }
 
     .bottomBox {
@@ -203,9 +173,5 @@
 
     .bottomBox .categoryCard div {
         font-size: 15px;
-    }
-
-    .horizontalLine div {
-        margin: 50px 0;
     }
 }
