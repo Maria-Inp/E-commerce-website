@@ -164,10 +164,10 @@ function TodayProducts() {
                         <img src={product.src} alt={product.alt} />
 
                         <div className={box.iconBox}>
-                          <div>
+                          <div className={box.heartIcon}>
                             <CgHeart fontSize="18px" />
                           </div>
-                          <div>
+                          <div className={box.eyeIcon}>
                             <CgEye fontSize="18px" />
                           </div>
                         </div>

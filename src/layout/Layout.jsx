@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 //icons
 import { BsChevronDown } from "react-icons/bs";
@@ -20,14 +21,33 @@ import { BsArrowUp } from "react-icons/bs";
 
 //css
 import styles from "./Layout.module.css";
-import "./Layout.css"
+import "./Layout.css";
 
 //images
-import qrCode from "../assets/download app/Qr Code.png"
-import googlePlay from "../assets/download app/GooglePlay.png"
-import appStore from "../assets/download app/download-appstore.png"
+import qrCode from "../assets/download app/Qr Code.png";
+import googlePlay from "../assets/download app/GooglePlay.png";
+import appStore from "../assets/download app/download-appstore.png";
 
 function Layout({ children }) {
+  const [showTopBtn, setShowTopBtn] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 450) {
+        setShowTopBtn(true);
+      } else {
+        setShowTopBtn(false);
+      }
+    });
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       <div className={styles.maxWidth}>
@@ -131,9 +151,11 @@ function Layout({ children }) {
 
           <div className={styles.moveUpBox}>
             <div className={styles.moveUpMainBox}>
-              <div className={styles.moveUpIcon}>
-                <BsArrowUp />
-              </div>
+              {showTopBtn && (
+                <div className={styles.moveUpIcon} onClick={scrollToTop}>
+                  <BsArrowUp />
+                </div>
+              )}
             </div>
           </div>
 
@@ -199,14 +221,8 @@ function Layout({ children }) {
                     <img src={qrCode} alt="" />
                   </div>
                   <div className={styles.appStore}>
-                    <img
-                      src={googlePlay}
-                      alt=""
-                    />
-                    <img
-                      src={appStore}
-                      alt=""
-                    />
+                    <img src={googlePlay} alt="" />
+                    <img src={appStore} alt="" />
                   </div>
                 </div>
 

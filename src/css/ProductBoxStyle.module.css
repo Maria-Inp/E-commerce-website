@@ -36,6 +36,16 @@
     font-size: 15px;
 }
 
+.productBox .imgDiv .iconBox .heartIcon:hover {
+    background-color: rgba(219, 68, 68, 0.7);
+    transform: scale(1.17);
+}
+
+.productBox .imgDiv .iconBox .eyeIcon:hover {
+    background-color: rgba(127, 127, 127, 0.7);
+    transform: scale(1.17);
+}
+
 .productBox .newBox {
     width: 55px;
     height: 26px;
@@ -147,6 +157,11 @@
     justify-content: center;
     align-items: center;
 } 
+
+.productBox .colorCircle .outerCircle:hover {
+    cursor: pointer;
+    transform: scale(1.13);
+}
 
 .productBox .colorCircle .outerCircle:first-child {
     border: 2px solid black;
