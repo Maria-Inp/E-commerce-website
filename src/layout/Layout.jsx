@@ -63,8 +63,13 @@ function Layout({ children }) {
               </div>
 
               <div className={styles.language}>
-                <span>English</span>
-                <BsChevronDown strokeWidth="1.5px" />
+                <div>
+                  English
+                </div>
+                <BsChevronDown
+                  className={styles.chevronIcon}
+                  strokeWidth="1.5px"
+                />
               </div>
             </div>
           </div>

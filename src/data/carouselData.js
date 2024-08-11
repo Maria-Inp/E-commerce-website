@@ -2,7 +2,7 @@ import img1 from "../assets/banner/1.png";
 import img2 from "../assets/banner/2.png";
 import img3 from "../assets/banner/3.png";
 import img4 from "../assets/banner/4.png";
-import img5 from "../assets/banner/4.png";
+import img5 from "../assets/banner/5.png";
 
 const slides = [
     {

@@ -2,6 +2,9 @@ import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useRef, useState } from "react";
 
+// components
+import CountdownTimer from "./CountdownTimer";
+
 // data
 import productBox from "../data/todayProductsData";
 
@@ -67,25 +70,7 @@ function TodayProducts() {
               </div>
 
               <div className={styles.saleClock}>
-                <div>
-                  <span>Days</span>
-                  <h3>03</h3>
-                </div>
-                <div>:</div>
-                <div>
-                  <span>Hours</span>
-                  <h3>23</h3>
-                </div>
-                <div>:</div>
-                <div>
-                  <span>Minutes</span>
-                  <h3>19</h3>
-                </div>
-                <div>:</div>
-                <div>
-                  <span>Seconds</span>
-                  <h3>56</h3>
-                </div>
+                <CountdownTimer />
               </div>
             </div>
 
