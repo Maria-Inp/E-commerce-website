@@ -29,6 +29,8 @@ import googlePlay from "../assets/download app/GooglePlay.png";
 import appStore from "../assets/download app/download-appstore.png";
 
 function Layout({ children }) {
+  const [page, setPage] = useState("Home");
+
   const [showTopBtn, setShowTopBtn] = useState(false);
 
   useEffect(() => {
@@ -63,9 +65,7 @@ function Layout({ children }) {
               </div>
 
               <div className={styles.language}>
-                <div>
-                  English
-                </div>
+                <div>English</div>
                 <BsChevronDown
                   className={styles.chevronIcon}
                   strokeWidth="1.5px"
@@ -81,10 +81,12 @@ function Layout({ children }) {
               </div>
 
               <div className={styles.navbarLinks}>
-                <NavLink to="/E-commerce-website/">Home</NavLink>
+                <NavLink to="/">Home</NavLink>
                 <NavLink to="/contact">Contact</NavLink>
                 <NavLink to="/about">About</NavLink>
-                <NavLink to="/signup">SignUp</NavLink>
+                <NavLink to="/signup" onClick={() => setPage("Signup")}>
+                  SignUp
+                </NavLink>
               </div>
             </div>
 
@@ -99,12 +101,17 @@ function Layout({ children }) {
               </div>
 
               <div className={styles.icons}>
-                <div className={styles.heart}>
-                  <BsHeart />
-                </div>
-                <div className={styles.shoppingCart}>
-                  <AiOutlineShoppingCart />
-                </div>
+                {page == "Home" ? (
+                  <>
+                    <div className={styles.heart}>
+                      <BsHeart />
+                    </div>
+                    <div className={styles.shoppingCart}>
+                      <AiOutlineShoppingCart />
+                    </div>
+                  </>
+                ) : null}
+
                 <div className={styles.menuIcon}>
                   <IoMenu />
                 </div>
