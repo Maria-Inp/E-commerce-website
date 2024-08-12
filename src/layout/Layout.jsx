@@ -81,7 +81,7 @@ function Layout({ children }) {
               </div>
 
               <div className={styles.navbarLinks}>
-                <NavLink to="/">Home</NavLink>
+                <NavLink to="/E-commerce-website/">Home</NavLink>
                 <NavLink to="/contact">Contact</NavLink>
                 <NavLink to="/about">About</NavLink>
                 <NavLink to="/signup" onClick={() => setPage("Signup")}>

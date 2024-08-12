@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 //components
 import Layout from "./layout/Layout";
@@ -11,7 +11,9 @@ function App() {
   return (
     <Layout>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        {/* <Route path="/E-commerce-website/" element={<Navigate to="/" replace />} />
+        <Route path="/E-commerce-website/signup/" element={<Navigate to="/signup" replace />} /> */}
+        <Route path="/E-commerce-website/" element={<HomePage />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
