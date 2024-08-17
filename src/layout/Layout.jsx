@@ -80,7 +80,7 @@ function Layout({ children }) {
           <div className={styles.navbar}>
             <div className={styles.leftNav}>
               <div className={styles.companyName}>
-                <h2>Exclusive</h2>
+                <NavLink to="/E-commerce-website/"><h2>Exclusive</h2></NavLink>
               </div>
 
               <div className={styles.navbarLinks}>

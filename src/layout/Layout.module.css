@@ -73,6 +73,11 @@
     align-items: center;
 }
 
+.header .navbar .leftNav .companyName a {
+    text-decoration: none;
+    color: #000000;
+}
+
 .navbar .leftNav .navbarLinks {
     width: 367px;
     display: flex;

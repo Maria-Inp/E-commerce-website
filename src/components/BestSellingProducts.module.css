@@ -88,22 +88,26 @@
     gap: 24px;
 }
 
-.leftBox .clockCircle {
+.leftBox .clockBox div:nth-child(2n+1) {
     width: 62px;
     height: 62px;
     border-radius: 50%;
     background-color: #FFFFFF;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
 }
 
-.leftBox .clockCircle h6 {
+.leftBox .clockBox div:nth-child(2n) {
+    display: none;
+}
+
+.leftBox .clockBox div:nth-child(2n+1) h3 {
     font-size: 16px;
 }
 
-.leftBox .clockCircle span {
+.leftBox .clockBox div:nth-child(2n+1) span {
     font-size: 11px;
 }
 
@@ -172,16 +176,16 @@
         gap: 5px;
     }
 
-    .leftBox .clockCircle {
+    .leftBox .clockBox div:nth-child(2n+1) {
         width: 35px;
         height: 35px;
     }
     
-    .leftBox .clockCircle h6 {
+    .leftBox .clockBox div:nth-child(2n+1) h3 {
         font-size: 13px;
     }
     
-    .leftBox .clockCircle span {
+    .leftBox .clockBox div:nth-child(2n+1) span {
         font-size: 7px;
     }
 

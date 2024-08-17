@@ -13,6 +13,7 @@ import { CgEye } from "react-icons/cg";
 //Images
 import bannerImg from "../assets/banner/second banner.png";
 import discountPrice from "../helpful/discountFunction";
+import CountdownTimer from "./CountdownTimer";
 
 function BestSellingProducts() {
   return (
@@ -105,25 +106,7 @@ function BestSellingProducts() {
               Enhance Your Music Experience
             </div>
             <div className={styles.clockBox}>
-              <div className={styles.clockCircle}>
-                <h6>23</h6>
-                <span>Hours</span>
-              </div>
-
-              <div className={styles.clockCircle}>
-                <h6>05</h6>
-                <span>Days</span>
-              </div>
-
-              <div className={styles.clockCircle}>
-                <h6>59</h6>
-                <span>Minutes</span>
-              </div>
-
-              <div className={styles.clockCircle}>
-                <h6>35</h6>
-                <span>Seconds</span>
-              </div>
+              <CountdownTimer />
             </div>
             <div className={styles.buyNowButton}>
               <div>Buy Now!</div>
