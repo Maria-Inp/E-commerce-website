@@ -84,6 +84,10 @@
     color: #000000;
 }
 
+.navbar .leftNav .navbarLinks a.active {
+    border-bottom: 2px solid #00000063;
+}
+
 .navbar .rightNav {
     width: 30%;
     display: flex;

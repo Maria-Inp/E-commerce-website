@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 //icons
@@ -21,15 +20,19 @@ import { BsArrowUp } from "react-icons/bs";
 
 //css
 import styles from "./Layout.module.css";
-import "./Layout.css";
 
 //images
 import qrCode from "../assets/download app/Qr Code.png";
 import googlePlay from "../assets/download app/GooglePlay.png";
 import appStore from "../assets/download app/download-appstore.png";
+import { NavLink, useLocation } from "react-router-dom";
 
 function Layout({ children }) {
-  const [page, setPage] = useState("Home");
+  console.log(window.location.pathname);
+  // console.log(window.location.href);
+
+  const location = useLocation();
+  console.log(location.pathname);
 
   const [showTopBtn, setShowTopBtn] = useState(false);
 
@@ -81,10 +84,44 @@ function Layout({ children }) {
               </div>
 
               <div className={styles.navbarLinks}>
-                <NavLink to="/E-commerce-website/">Home</NavLink>
-                <NavLink to="/contact">Contact</NavLink>
-                <NavLink to="/about">About</NavLink>
-                <NavLink to="/signup" onClick={() => setPage("Signup")}>
+                <NavLink
+                  className={
+                    window.location.pathname === "/E-commerce-website/"
+                      ? styles.active
+                      : null
+                  }
+                  to="/E-commerce-website/"
+                >
+                  Home
+                </NavLink>
+                <NavLink
+                  className={
+                    window.location.pathname === "/E-commerce-website/contact"
+                      ? styles.active
+                      : null
+                  }
+                  to="/E-commerce-website/contact"
+                >
+                  Contact
+                </NavLink>
+                <NavLink
+                  className={
+                    window.location.pathname === "/E-commerce-website/about"
+                      ? styles.active
+                      : null
+                  }
+                  to="/E-commerce-website/about"
+                >
+                  About
+                </NavLink>
+                <NavLink
+                  className={
+                    window.location.pathname === "/E-commerce-website/signup"
+                      ? styles.active
+                      : null
+                  }
+                  to="/E-commerce-website/signup"
+                >
                   SignUp
                 </NavLink>
               </div>
@@ -101,7 +138,7 @@ function Layout({ children }) {
               </div>
 
               <div className={styles.icons}>
-                {page == "Home" ? (
+                {(window.location.pathname !== "/E-commerce-website/signup") && (window.location.pathname !== "/E-commerce-website/login") ? (
                   <>
                     <div className={styles.heart}>
                       <BsHeart />
@@ -127,39 +164,43 @@ function Layout({ children }) {
         {children}
 
         <footer>
-          <div className={styles.servicesBox}>
-            <div className={styles.servicesMainBox}>
-              <div className={styles.services1}>
-                <div className={styles.serviceIcon}>
-                  <TbTruckDelivery />
-                </div>
-                <div className={styles.serviceDetail}>
-                  <h5>FREE AND FAST DELIVERY</h5>
-                  <span>Free delivery for all orders over $140</span>
-                </div>
-              </div>
+          {(window.location.pathname !== "/E-commerce-website/signup") && (window.location.pathname !== "/E-commerce-website/login") ? (
+            <>
+              <div className={styles.servicesBox}>
+                <div className={styles.servicesMainBox}>
+                  <div className={styles.services1}>
+                    <div className={styles.serviceIcon}>
+                      <TbTruckDelivery />
+                    </div>
+                    <div className={styles.serviceDetail}>
+                      <h5>FREE AND FAST DELIVERY</h5>
+                      <span>Free delivery for all orders over $140</span>
+                    </div>
+                  </div>
 
-              <div className={styles.services2}>
-                <div className={styles.serviceIcon}>
-                  <MdOutlineHeadsetMic />
-                </div>
-                <div className={styles.serviceDetail}>
-                  <h5>24/7 CUSTOMER SERVICE</h5>
-                  <span>Friendly 24/7 customer support</span>
-                </div>
-              </div>
+                  <div className={styles.services2}>
+                    <div className={styles.serviceIcon}>
+                      <MdOutlineHeadsetMic />
+                    </div>
+                    <div className={styles.serviceDetail}>
+                      <h5>24/7 CUSTOMER SERVICE</h5>
+                      <span>Friendly 24/7 customer support</span>
+                    </div>
+                  </div>
 
-              <div className={styles.services3}>
-                <div className={styles.serviceIcon}>
-                  <RiShieldCheckLine />
-                </div>
-                <div className={styles.serviceDetail}>
-                  <h5>MONEY BACK GUARANTEE</h5>
-                  <span>We reurn money within 30 days</span>
+                  <div className={styles.services3}>
+                    <div className={styles.serviceIcon}>
+                      <RiShieldCheckLine />
+                    </div>
+                    <div className={styles.serviceDetail}>
+                      <h5>MONEY BACK GUARANTEE</h5>
+                      <span>We reurn money within 30 days</span>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </>
+          ) : null}
 
           <div className={styles.moveUpBox}>
             <div className={styles.moveUpMainBox}>
