@@ -17,6 +17,7 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { MdOutlineHeadsetMic } from "react-icons/md";
 import { RiShieldCheckLine } from "react-icons/ri";
 import { BsArrowUp } from "react-icons/bs";
+import { IoMdClose } from "react-icons/io";
 
 //css
 import styles from "./Layout.module.css";
@@ -25,15 +26,9 @@ import styles from "./Layout.module.css";
 import qrCode from "../assets/download app/Qr Code.png";
 import googlePlay from "../assets/download app/GooglePlay.png";
 import appStore from "../assets/download app/download-appstore.png";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Layout({ children }) {
-  console.log(window.location.pathname);
-  // console.log(window.location.href);
-
-  const location = useLocation();
-  console.log(location.pathname);
-
   const [showTopBtn, setShowTopBtn] = useState(false);
 
   useEffect(() => {
@@ -52,6 +47,8 @@ function Layout({ children }) {
       behavior: "smooth",
     });
   };
+
+  const [showMenuBtn, setShowMenuBtn] = useState(false);
 
   return (
     <>
@@ -80,7 +77,9 @@ function Layout({ children }) {
           <div className={styles.navbar}>
             <div className={styles.leftNav}>
               <div className={styles.companyName}>
-                <NavLink to="/E-commerce-website/"><h2>Exclusive</h2></NavLink>
+                <NavLink to="/E-commerce-website/">
+                  <h2>Exclusive</h2>
+                </NavLink>
               </div>
 
               <div className={styles.navbarLinks}>
@@ -138,7 +137,8 @@ function Layout({ children }) {
               </div>
 
               <div className={styles.icons}>
-                {(window.location.pathname !== "/E-commerce-website/signup") && (window.location.pathname !== "/E-commerce-website/login") ? (
+                {window.location.pathname !== "/E-commerce-website/signup" &&
+                window.location.pathname !== "/E-commerce-website/login" ? (
                   <>
                     <div className={styles.heart}>
                       <BsHeart />
@@ -150,13 +150,71 @@ function Layout({ children }) {
                 ) : null}
 
                 <div className={styles.menuIcon}>
-                  <IoMenu />
+                  <IoMenu onClick={() => setShowMenuBtn(true)} />
                 </div>
               </div>
             </div>
           </div>
 
-          <div></div>
+          <div
+            className={
+              showMenuBtn === true ? styles.menuMainBox : styles.hideMenuMainBox
+            }
+          >
+            <div className={styles.menuBox}>
+              <div className={styles.closeIcon}>
+                <IoMdClose className={styles.close} onClick={() => setShowMenuBtn(false)} />
+              </div>
+
+              <NavLink
+                className={
+                  window.location.pathname === "/E-commerce-website/"
+                    ? styles.active
+                    : null
+                }
+                to="/E-commerce-website/"
+                onClick={() => setShowMenuBtn(false)}
+              >
+                Home
+              </NavLink>
+
+              <NavLink
+                className={
+                  window.location.pathname === "/E-commerce-website/contact"
+                    ? styles.active
+                    : null
+                }
+                to="/E-commerce-website/contact"
+                onClick={() => setShowMenuBtn(false)}
+              >
+                Contact
+              </NavLink>
+
+              <NavLink
+                className={
+                  window.location.pathname === "/E-commerce-website/about"
+                    ? styles.active
+                    : null
+                }
+                to="/E-commerce-website/about"
+                onClick={() => setShowMenuBtn(false)}
+              >
+                About
+              </NavLink>
+
+              <NavLink
+                className={
+                  window.location.pathname === "/E-commerce-website/signup"
+                    ? styles.active
+                    : null
+                }
+                to="/E-commerce-website/signup"
+                onClick={() => setShowMenuBtn(false)}
+              >
+                SignUp
+              </NavLink>
+            </div>
+          </div>
 
           <div className={styles.line}></div>
         </header>
@@ -164,7 +222,8 @@ function Layout({ children }) {
         {children}
 
         <footer>
-          {(window.location.pathname !== "/E-commerce-website/signup") && (window.location.pathname !== "/E-commerce-website/login") ? (
+          {window.location.pathname !== "/E-commerce-website/signup" &&
+          window.location.pathname !== "/E-commerce-website/login" ? (
             <>
               <div className={styles.servicesBox}>
                 <div className={styles.servicesMainBox}>

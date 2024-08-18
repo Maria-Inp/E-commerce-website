@@ -5,6 +5,7 @@
   align-items: center;
   width: 100%;
   height: 100%;
+  /* transition: ease 1000ms; */
 }
 
 .link {
@@ -31,26 +32,6 @@
 .slide-hidden {
     display: none;
 }
-
-/* .arrow {
-    position: absolute;
-    width: 2rem;
-    height: 2rem;
-    color: white;
-    filter: drop-shadow(0px 0px 5px #555);
-}
-
-.arrow:hover {
-    cursor: pointer;
-}
-
-.arrow-left {
-    left: 1rem;
-}
-
-.arrow-right {
-    right: 1rem;
-} */
 
 .indicators {
   display: flex;

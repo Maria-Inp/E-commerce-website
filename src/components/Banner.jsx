@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 //data
 import slides from "../data/carouselData";
@@ -8,25 +8,39 @@ import slides from "../data/carouselData";
 import "./Banner.css";
 
 //icons
-// import { IoMdArrowForward } from "react-icons/io";
-// import { IoMdArrowBack } from "react-icons/io";
 import { GoArrowRight } from "react-icons/go";
+
+const delay = 2000;
+//2s
 
 function Banner() {
   const [slide, setSlide] = useState(0);
 
-  // const nextSlide = () => {
-  //   setSlide(slide === data.length - 1 ? 0 : slide + 1);
-  // };
+  const timeoutRef = useRef(null);
 
-  // const prevSlide = () => {
-  //   setSlide(slide === 0 ? data.length - 1 : slide - 1);
-  // };
+  function resetTimeout() {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  }
+
+  useEffect(() => {
+    resetTimeout();
+    timeoutRef.current = setTimeout(
+      () =>
+        setSlide((prevIndex) =>
+          prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+        ),
+      delay
+    );
+
+    return () => {
+      resetTimeout();
+    };
+  }, [slide]);
 
   return (
     <div className="carousel">
-      {/* <IoMdArrowBack className="arrow arrow-left" onClick={prevSlide} /> */}
-
       {slides.map((item, index) => {
         return (
           <>
@@ -44,8 +58,6 @@ function Banner() {
           </>
         );
       })}
-
-      {/* <IoMdArrowForward className="arrow arrow-right" onClick={nextSlide} /> */}
 
       <span className="indicators">
         {slides.map((_, index) => {

@@ -11,6 +11,7 @@
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .topHeader {
@@ -152,6 +153,55 @@
     color: #000000;
 }
 
+.header .menuMainBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(22, 22, 22, 0.6);
+    z-index: 1000;
+}
+
+.header .hideMenuMainBox {
+    display: none;
+}
+
+.header .menuBox {
+    width: 75%;
+    height: 100%;
+    background-color: rgb(255, 255, 255, 0.95);
+}
+
+.header .menuBox .closeIcon {
+    font-size: 35px;
+    padding: 5px;
+    border-bottom: 1px solid #dcdada;
+    display: flex;
+    justify-content: end;
+}
+
+.header .menuBox .closeIcon .close:hover {
+    background-color: rgba(0, 0, 0, .05);
+}
+
+.header .menuBox a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+    width: 100%;
+    height: 65px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #000000;
+    border-bottom: 1px solid #dcdada;
+}
+
+.header .menuBox a:hover {
+    background-color: rgba(0, 0, 0, .05);
+}
+
 .line {
     width: 100%;
     height: 1px;
@@ -181,7 +231,6 @@
 .servicesMainBox .services1, .servicesMainBox .services2, .servicesMainBox .services3 {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
 }
 
@@ -555,6 +604,10 @@
 
     .header .navbar {
         padding: 0 15px;
+    }
+
+    .header .menuMainBox {
+        display: none;
     }
 
     .header .navbar .leftNav {
